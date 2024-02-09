@@ -23,6 +23,10 @@ body {
     margin-left: 20px;
 }
 
+.question h1 {
+    font-size: 25px;
+}
+
 ul {
     list-style: none;
 }
