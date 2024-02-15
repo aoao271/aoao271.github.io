@@ -1,5 +1,7 @@
 body {
     font-family: 'Noto Sans JP', sans-serif;
+    height: 100%;
+    background: #ECEFF1;
 }
 
 a {
@@ -11,17 +13,13 @@ a:hover {
     color: #0000ff;
 }
 
-td {
-    text-align: center;
-}
-
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: #1b1b1b;
+    background-color: #0D47A1;
     color: #fff;
     display: flex;
     box-shadow: 0 2px 4px gray;
@@ -43,33 +41,76 @@ td {
     margin-right: 30px;
 }
 
-.main {
-    margin-top: 70px;
-    border-top: solid 0.5px #dcdcdc;
-    border-bottom: solid 0.5px #dcdcdc;
+section {
+    margin-top: 60px;
+}
+
+.content {
+    height: 100vh;
+    display: flex;
 }
 
 .content-nav {
-    border-radius: 10px;
-    border: solid 1px #337ab7;
-    margin: 10px;
-    width: 36%;
+    width: 35%;
+    background: #fff;
+    margin: 15px;
+    box-shadow: 2px 2px 4px -2px gray;
 }
 
-.title {
-    color: #fff;
-    border-bottom: solid 1px #337ab7;
-    background-color: #337ab7;
-    border-radius: 10px 10px 0 0;
+
+.content-title {
+    border-bottom: solid 2px #337ab7;
 }
 
-.title h3 {
-    display: inline;
-    font-size: 15px;
+.content-test {
+    padding: 10px 0;
+}
+
+.content-nav h3 {
+    text-align: center;
+}
+
+.content-true {
+    width: 65%;
+    background: #fff;
+    margin: 15px;
+    box-shadow: 2px 2px 4px -2px gray;
+}
+
+strong {
+    margin-left: 10px;
+}
+
+.content-table {
+    width: 100%;
 }
 
 table {
+    margin: 10px auto;
+    width: 80%;
     border-collapse: collapse;
-    margin: 10px;
-    width: 100%;
+    font-size: 15px;
+}
+
+.number {
+    text-align: center;
+}
+
+@media screen and (max-width:480px) {
+    .content {
+        display: block;
+        width: 100%;
+        margin-top: 75px;
+    }
+
+    .content-nav {
+        width: auto;
+        margin: 15px;
+    }
+
+    .content-true {
+        width: auto;
+        margin: 15px;
+        height: 100vh;
+    }
 }
