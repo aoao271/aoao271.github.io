@@ -84,13 +84,12 @@ nav {
     .nav-links {
         position: absolute;
         right: 0;
-        height: 100vh;
-        top: 0;
-        padding-top: 7vh;
+        height: 93vh;
+        top: 7vh;
         background-color: #55aaff;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 100%;
         transform: translateX(100%);
         transition: all 0.5s ease-in-out;
     }
@@ -141,4 +140,10 @@ nav {
     font-size: 60px;
     margin: 0;
     border-bottom: solid 5px #fff;
+}
+
+@media screen and (max-width: 480px) {
+    .title h1 {
+        font-size: 40px;
+    }
 }
