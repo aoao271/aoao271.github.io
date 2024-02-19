@@ -151,11 +151,15 @@ nav {
 }
 
 .question {
-    margin-left: 20px;
+    margin: 10px 0 10px 25px;
 }
 
 .question h1 {
     font-size: 25px;
+}
+
+.question ul {
+    margin: 10px;
 }
 
 ul {
