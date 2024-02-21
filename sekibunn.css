@@ -160,6 +160,7 @@ nav {
 
 .question ul {
     margin: 10px;
+    display: grid;
 }
 
 ul {
