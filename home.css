@@ -154,7 +154,7 @@ nav {
     padding: 10px 0;
 }
 
-.content-nav h3 {
+h3 {
     text-align: center;
 }
 
@@ -187,6 +187,23 @@ small {
 
 .number {
     text-align: center;
+}
+
+.content-grid {
+    display: grid;
+}
+
+.content-grid-child {
+    padding: 10px;
+    border-radius: 20px;
+    margin: 5px;
+    color: #fff;
+    background-color: #66b7ec;
+    text-align: center; 
+}
+
+.content-grid-child:nth-child(1) {
+    margin-top: 10px;
 }
 
 @media screen and (max-width:480px) {
