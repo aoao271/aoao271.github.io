@@ -69,14 +69,14 @@
                 y' & = & (114514x)' \cdot 810^{114514x}\log 810 \\
                 & = & 114514 \cdot 810^{114514x}\log 810
                \end{eqnarray} \)</li><br>
-            <li>(5)の答え \( \{ (\cos x\log x + \frac{\sin x}{x}) \cdot xlog x + 1 \} \cdot x^{x^{\sin x} + \sin x - 1} \)
+            <li>(5)の答え \( \{ (\cos x\log x + \frac{\sin x}{x}) \cdot x\log x + 1 \} \cdot x^{x^{\sin x} + \sin x - 1} \)
                 <p>解説：</p>
                 \( \hspace{35px} \begin{eqnarray}
                 y & = & x^{ x^{\sin x} } \\
                 y' & = & (e^{x^{\sin x}\log x})' \\
                 & = & (x^{\sin x}\log x)' \cdot e^{x^{\sin x}\log x} \\
-                & = & (x^{\sin x}\log x)' \cdot x^{x^{\sin x}} \\
-                & = & \{ (x^{\sin x})'\log x + x^{\sin x - 1} \} \cdot x^{x^{\sin x}} ‥(＊) \\
+                & = & (x^{\sin x}\log x)' \cdot x^{ x^{\sin x} } \\
+                & = & \{ (x^{\sin x})'\log x + x^{\sin x - 1} \} \cdot x^{ x^{\sin x} } ‥(＊) \\
                \end{eqnarray} \)
             <p>ここで\( (x^{\sin x})' \)について考える。</p>
                 \( \hspace{35px} \begin{eqnarray}
@@ -87,7 +87,7 @@
             <p>これを(＊)に代入すると</p>
             \( \hspace{35px} \begin{eqnarray}
                 y' & = & \{ (\cos x\log x + \frac{\sin x}{x}) \cdot x^{\sin x}\log x + x^{\sin x - 1} \} \cdot x^{x^{\sin x}} \\
-                & = & \{ (\cos x\log x + \frac{\sin x}{x}) \cdot xlog x + 1 \} \cdot x^{x^{\sin x} + \sin x - 1}
+                & = & \{ (\cos x\log x + \frac{\sin x}{x}) \cdot x\log x + 1 \} \cdot x^{x^{\sin x} + \sin x - 1}
            \end{eqnarray} \)
             </li>
         </ul>
