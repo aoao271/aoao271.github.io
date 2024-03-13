@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Noto Sans JP', sans-serif;
+    background-color: #ECEFF1;
 }
 
 header a {
@@ -148,51 +149,60 @@ nav {
     align-items: center;
     background-color: rgba(30,37,40,.82);
     height: 65vh;
+    margin: none;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        height: 30vh;
+    }
 }
 
 .title h1 {
     font-size: 50px;
-    margin: 0 15px;
-}
-
-.title h1::before,.title h1::after {
-    background-color: #1e90ff; /* 横線の色 */
-    content: "";
-    height: 5px; /* 横線の高さ */
-    width: 60px;
-}
-
-.content-nav {
-    margin: 10px 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 40vh;
-}
-
-.content-nav ul {
-    display: grid;
-}
-
-.content-nav li {
-    padding: 3px 10vh;
-    border: solid 2.5px #b9b7b7;
-    border-radius: 10px;
-    list-style: none;
-    font-weight: bold;
 }
 
 .content-list {
-    background-color: #ECEFF1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     height: 100vh;
 }
 
-.content-list strong {
+.content-choise {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
     margin: 20px;
-    font-size: 40px;
-    font-style: italic;
+}
+
+.choice {
+    padding: 10px;
+    border-radius: 20px;
+    margin: 5px;
+    background-color: #fff;
+    box-shadow: 0 5px 0 #ddd;
+}
+
+.contents {
+    width: 100%;
+    height: 100%;
+}
+
+.topic {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    color: #fff;
+}
+
+.topic:nth-child(1) {
+    background-color:  #5a64e8; 
+}
+.topic:nth-child(2) {
+    background-color:  #eb6e17; 
+}
+.topic:nth-child(3) {
+    background-color:  #13b5b1;
+}
+.topic:nth-child(4) {
+    background-color:  #fee400;
 }
