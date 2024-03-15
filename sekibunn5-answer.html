@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>積を分ける積分｜解説</title>
+    <link rel="stylesheet" href="./sekibunn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p><a href="./index.html">積を分ける積分</a></p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./home.html">ホーム</a></li>
+                <li><a href="./test.html">今週のテスト</a></li>
+                <li><a href="./past.html">過去問</a></li>
+                <li><a href="./article.html">記事</a></li>
+                <li><a href="">自己満Q&A</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>           
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <p class="title-num">積分テストNo.5</p>
+        <ul>
+            <li><a href="./sekibunn5.html">問題</a></li>
+            <li class="Q"><a href="./sekibunn5-answer.html">解説</a></li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>参考にしたサイト➔<a href="https://manabitimes.jp/math/1109">微分公式一覧（基礎から発展まで） | 高校数学の美しい物語</a></p>
+        <h1>問題：次の関数を微分せよ</h1>
+        <ul>
+            <li>(1)の答え \( 3(\cos x + \sin x)^2(\cos x - \sin x) \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                y & = & (\cos x + \sin x)^3 \\
+                y' & = & 3(\cos x + \sin x)^2(\cos x + \sin x)' \\
+                & = & 3(\cos x + \sin x)^2(\cos x - \sin x)
+               \end{eqnarray} \)</li><br>
+            <li>(2)の答え \( x^2\log 3x \) 
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                y & = & \dfrac{1}{3}x^3\log 3x - \dfrac{1}{9}x^3 \\
+                y' & = & (\dfrac{1}{3}x^3)'\log 3x + \dfrac{1}{3}x^3(\log 3x)' - \dfrac{1}{3}x^2 \\
+                & = & x^2\log 3x + \dfrac{1}{3}x^3 \cdot \dfrac{(3x)'}{3x} - \dfrac{1}{3}x^2 \\
+                & = & x^2\log 3x + \dfrac{1}{3}x^2 - \dfrac{1}{3}x^2 \\
+                & = & x^2\log 3x
+               \end{eqnarray} \)</li><br>
+            <li>(3)の答え \( -\dfrac{x}{ (x^2 + 1)^{ \frac{3}{2} } } \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                y & = & \dfrac{1}{ \sqrt{x^2 + 1} } \\
+                y' & = & -\dfrac{(\sqrt{x^2 + 1})'}{(\sqrt{x^2 + 1})^2} \\
+                & = & -\dfrac{ \frac{(x^2 + 1)'}{ 2\sqrt{x^2 + 1} } }{x^2 + 1} \\
+                & = & -\dfrac{ \frac{2x}{ 2\sqrt{x^2 + 1} } }{x^2 + 1} \\
+                & = & -\dfrac{ \frac{x}{ \sqrt{x^2 + 1} } }{x^2 + 1} \\
+                & = & -\dfrac{x}{ (x^2 + 1)^{ \frac{3}{2} } }
+               \end{eqnarray} \)</li><br>
+            <li>(4)の答え \( \dfrac{1}{\cos x} \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                y & = & \dfrac{1}{2}\log \dfrac{1 + \sin x}{1 - \sin x} \\
+                & = & \dfrac{1}{2}\{ \log (1 + \sin x) - \log (1 - \sin x) \} \\
+                y' & = & \dfrac{1}{2}\{ \frac{(1 + \sin x)'}{1 + \sin x} - \frac{(1 - \sin x)'}{1 - \sin x} \} \\
+                & = & \dfrac{1}{2}( \frac{\cos x}{1 + \sin x} - \frac{-\cos x}{1 - \sin x} ) \\
+                & = & \dfrac{1}{2}\{ \frac{\cos x(1 - \sin x) + \cos x(1 + \sin x)}{(1 + \sin x)(1 - \sin x)} \} \\
+                & = & \dfrac{1}{2}\dfrac{2\cos x}{1 - \sin^2 x} \\
+                & = & \dfrac{\cos x}{\cos^2 x} \\
+                & = & \dfrac{1}{\cos x}
+               \end{eqnarray} \)</li><br>
+            <li>(5)の答え \( \{ (-\sin x\log x + \frac{\cos x}{x})x\log x + 1 \}x^{x^{\cos x} + \cos x - 1} \)
+                <p>解説：</p>
+                \( \hspace{35px} \begin{eqnarray}
+                y & = & x^{ x^{\cos x} } \\
+                y' & = & (e^{x^{\cos x}\log x})' \\
+                & = & (x^{\cos x}\log x)'e^{x^{\cos x}\log x} \\
+                & = & (x^{\cos x}\log x)'x^{ x^{\cos x} } \\
+                & = & \{ (x^{\cos x})'\log x + x^{\cos x - 1} \}x^{ x^{\cos x} } ‥(＊) \\
+               \end{eqnarray} \)
+            <p>ここで\( (x^{\cos x})' \)について考える。</p>
+                \( \hspace{35px} \begin{eqnarray}
+                (x^{\cos x})' & = & (e^{\cos x\log x})' \\
+                    & = & (\cos x\log x)'e^{\cos x\log x}  \\
+                    & = & (-\sin x\log x + \frac{\cos x}{x})x^{\cos x}
+                   \end{eqnarray} \)
+            <p>これを(＊)に代入すると</p>
+            \( \hspace{35px} \begin{eqnarray}
+                y' & = & \{ (-\sin x\log x + \frac{\cos x}{x})x^{\cos x}\log x + x^{\cos x - 1} \}x^{x^{\cos x}} \\
+                & = & \{ (-\sin x\log x + \frac{\cos x}{x})x\log x + 1 \}x^{x^{\cos x} + \cos x - 1}
+           \end{eqnarray} \)
+            </li>
+        </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./home.js"></script>
+</body>
+</html>
