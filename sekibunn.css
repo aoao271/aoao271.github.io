@@ -176,6 +176,8 @@ nav {
 .question ul {
     margin: 10px;
     display: grid;
+    width: 100%;
+    overflow-x: scroll;
 }
 
 ul {
