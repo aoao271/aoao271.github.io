@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>積を分ける積分｜解説</title>
+    <link rel="stylesheet" href="./sekibunn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p><a href="./index.html">積を分ける積分</a></p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./home.html">ホーム</a></li>
+                <li><a href="./test.html">今週のテスト</a></li>
+                <li><a href="./past.html">過去問</a></li>
+                <li><a href="./article.html">記事</a></li>
+                <li><a href="">自己満Q&A</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>           
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <p class="title-num">積分テストNo.8</p>
+        <ul>
+            <li><a href="./sekibunn8.html">問題</a></li>
+            <li class="Q"><a href="./sekibunn8-answer.html">解説</a></li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>参考にしたサイト➔<a href="https://univ-juken.com/chikan-sekibun">置換積分法の公式やパターンを見分けるコツをわかりやすく解説 | 受験辞典</a></p>
+        <h1>問題：次の式を計算せよ</h1>
+        <ul>
+            <li>(1)の答え：\( \dfrac{1}{5}(x + 5)^5 - \dfrac{5}{4}(x + 5)^4 + C （Cは積分定数） \)
+                <p>解説：</p> 
+                <p>\( x + 5 = t \)とおくと、\( x = t - 5 \)<br>
+                \( \dfrac{dx}{dt} = 1 \)より\( dx = dt \)</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int x(x + 5)^3 \, dx & = & \displaystyle \int (t - 5)t^3 \, dt \\
+                & = & \displaystyle \int t^4 - 5t^3 \, dt \\
+                & = & \dfrac{1}{5}t^5 - \dfrac{5}{4}t^4 \\
+                & = & \dfrac{1}{5}(x + 5)^5 - \dfrac{5}{4}(x + 5)^4 + C （Cは積分定数）
+                \end{eqnarray} \)</li><br>
+            <li>(2)の答え：\( \dfrac{1}{2}(x + 1)^{\frac{1}{2}} - (x + 1)^{-\frac{1}{2}} + C （Cは積分定数） \) 
+                <p>解説：</p>
+                <p>\( \sqrt{x + 1} = t \)とおくと、\( x = t^2 - 1 \)<br>
+                \( \dfrac{dx}{dt} = 2t \)より\( dx = 2tdt \)</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int \dfrac{x + 3}{\sqrt{x + 1}} \, dx & = & \displaystyle \int \dfrac{t^2 + 2}{t}\dfrac{1}{2t}2t \, dx \\
+                & = & \displaystyle \int \dfrac{t^2 + 2}{2t^2} \, \dfrac{dt}{dx}dx \\
+                & = & \displaystyle \int \dfrac{1}{2} + t^{-2} \, dt \\
+                & = & \dfrac{1}{2}t - t^{-1} \\
+                & = & \dfrac{1}{2}(x + 1)^{\frac{1}{2}} - (x + 1)^{-\frac{1}{2}} + C （Cは積分定数）
+                \end{eqnarray} \)</li><br>
+            <li>(3)の答え：\( \dfrac{1}{2}\log(e^{2x} + 2) + C （Cは積分定数） \)
+                <p>解説：</p>
+                <p>\( e^{2x} + 2 = t \)とおくと、<br>
+                \( \dfrac{dt}{dx} = 2e^{2x} \)より\( dt = 2e^{2x}dx \)</p>                
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int \dfrac{e^{2x}}{e^{2x} + 2} \, dx & = & \displaystyle \int \dfrac{1}{t}\dfrac{1}{2}2e^{2x} \, dx  \\
+                & = & \dfrac{1}{2}\displaystyle \int \dfrac{1}{t} \, dt \\
+                & = & \dfrac{1}{2}\log|t| \\
+                &&e^{2x} + 2 > 0より \\
+                & = & \dfrac{1}{2}\log(e^{2x} + 2) + C （Cは積分定数） \\
+                \end{eqnarray} \)</li><br>
+            <li>(4)の答え：\( \dfrac{1}{8}(e^{-2} - 1) \)
+                <p>解説：</p>
+                <p>\( x + 5 = t \)とおくと、\( x = t - 5 \)<br>
+                \( \dfrac{dx}{dt} = 1 \)より\( dx = dt \)</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{-2}^{3} (x - 3)(x + 2) \, dx & = & \displaystyle \int_{-1}^{0} \dfrac{1}{8}(2x^4 - 2)'e^{2x^4 - 2} \, dx \\
+                & = & \left[ \dfrac{1}{8}e^{2x^4 - 2} \right]_{-1}^{0} \\
+                & = & \dfrac{1}{8}e^{-2} - \dfrac{1}{8} \\
+                & = & \dfrac{1}{8}(e^{-2} - 1) \\
+                \end{eqnarray} \)</li><br>
+            <li>(5)の答え：\( 9 \)
+                <p>解説：</p>
+                <p>\( x + 5 = t \)とおくと、\( x = t - 5 \)<br>
+                \( \dfrac{dx}{dt} = 1 \)より\( dx = dt \)</p>                
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{\frac{\pi}{3}}^{\frac{\pi}{2}} \sin^3 x\cos^2 x \, dx & = & \displaystyle \int_{0}^{9} \dfrac{-\frac{1}{2}(81 - x^2)'}{\sqrt{81 - x^2}} \, dx \\
+                & = & \left[ -\dfrac{1}{2}2(81 - x^2)^{\frac{1}{2}} \right]_{0}^{9} \\
+                & = & \left[ -(81 - x^2)^{\frac{1}{2}} \right]_{0}^{9} \\
+                & = & 0 - (-9) \\
+                & = & 9
+                \end{eqnarray} \)</li>
+        </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./home.js"></script>
+</body>
+</html>
