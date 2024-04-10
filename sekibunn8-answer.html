@@ -48,7 +48,7 @@
                 \( \hspace{35px} \begin{eqnarray}
                 \displaystyle \int x(x + 5)^3 \, dx & = & \displaystyle \int (t - 5)t^3 \, dt \\
                 & = & \displaystyle \int t^4 - 5t^3 \, dt \\
-                & = & \dfrac{1}{5}t^5 - \dfrac{5}{4}t^4 \\
+                & = & \dfrac{1}{5}t^5 - \dfrac{5}{4}t^4 + C \\
                 & = & \dfrac{1}{5}(x + 5)^5 - \dfrac{5}{4}(x + 5)^4 + C （Cは積分定数）
                 \end{eqnarray} \)</li><br>
             <li>(2)の答え：\( \dfrac{1}{2}\log(e^{2x} + 2) + C （Cは積分定数） \)
@@ -58,20 +58,19 @@
                 \( \hspace{35px} \begin{eqnarray}
                 \displaystyle \int \dfrac{e^{2x}}{e^{2x} + 2} \, dx & = & \displaystyle \int \dfrac{1}{t}\dfrac{1}{2}2e^{2x} \, dx  \\
                 & = & \dfrac{1}{2}\displaystyle \int \dfrac{1}{t} \, dt \\
-                & = & \dfrac{1}{2}\log|t| \\
+                & = & \dfrac{1}{2}\log|t| + C \\
                 &&e^{2x} + 2 > 0より \\
                 & = & \dfrac{1}{2}\log(e^{2x} + 2) + C （Cは積分定数） \\
                 \end{eqnarray} \)</li><br>
-            <li>(3)の答え：\( \dfrac{1}{2}(x + 1)^{\frac{1}{2}} - (x + 1)^{-\frac{1}{2}} + C （Cは積分定数） \) 
+            <li>(3)の答え：\( -\dfrac{1}{25\log x + 15} + C （Cは積分定数） \) 
                 <p>解説：</p>
-                <p>\( (x + 1)^{-\frac{1}{2}} = t \)とおくと、<br>
-                \( \dfrac{dt}{dx} =  \)より\( dx = 2tdt \)</p>
+                <p>\( \log x = t \)とおくと、<br>
+                \( \dfrac{dt}{dx} = \dfrac{1}{x} \)より\( dt = \dfrac{1}{x}dx \)</p>
                 \( \hspace{35px} \begin{eqnarray}
-                \displaystyle \int \dfrac{x + 3}{\sqrt{x + 1}} \, dx & = & \displaystyle \int \dfrac{t^2 + 2}{t}\dfrac{1}{2t}2t \, dx \\
-                & = & \displaystyle \int \dfrac{t^2 + 2}{2t^2} \, \dfrac{dt}{dx}dx \\
-                & = & \displaystyle \int \dfrac{1}{2} + t^{-2} \, dt \\
-                & = & \dfrac{1}{2}t - t^{-1} \\
-                & = & \dfrac{1}{2}(x + 1)^{\frac{1}{2}} - (x + 1)^{-\frac{1}{2}} + C （Cは積分定数）
+                \displaystyle \int \dfrac{dx}{x(5\log x + 3)^2} & = & \displaystyle \int \dfrac{dt}{(5t + 3)^2} \\
+                & = & \displaystyle \int (5t + 3)^{-2} \, dt \\
+                & = & -(5t + 3)^{-1} \cdot \dfrac{1}{(5t + 3)'} + C \\
+                & = & -\dfrac{1}{25\log x + 15} + C （Cは積分定数）
                 \end{eqnarray} \)</li><br>
             <li>(4)の答え：\( -\dfrac{125}{6} \)
                 <p>解説：</p>
