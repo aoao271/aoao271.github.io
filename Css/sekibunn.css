@@ -177,7 +177,7 @@ nav {
     margin: 10px;
     display: grid;
     width: 100%;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
 }
 
 ul {
