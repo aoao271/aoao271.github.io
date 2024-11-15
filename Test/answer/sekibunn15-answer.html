@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>積を分ける積分｜解説</title>
+    <link rel="stylesheet" href="../../Css/sekibunn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p><a href="../../index.html">積を分ける積分</a></p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../App/home.html">ホーム</a></li>
+                <li><a href="../../App/test.html">今週のテスト</a></li>
+                <li><a href="../../App/past.html">過去問</a></li>
+                <li><a href="../../App/article.html">記事</a></li>
+                <li><a href="">自己満Q&A</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>           
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <p class="title-num">積分テストNo.14</p>
+        <ul>
+            <li><a href="../question/sekibunn14.html">問題</a></li>
+            <li class="Q"><a href="./sekibunn14-answer.html">解説</a></li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>参考にしたサイト➔<a href="https://manabitimes.jp/math/1320">これだよ</a></p>
+        <h1>問題：次の式を計算せよ</h1>
+        <ul>
+            <li>(1)の答え：\( 3^x\log3 + C \)
+            <li>(2)の答え：\( \dfrac{2^x}{\log2}\left( x^2 - \dfrac{2x}{\log2} + \dfrac{2}{(\log2)^2} \right) + C \)
+            <p>解説：</p> 
+                この積分は\( 2^x \)と\( x^2 \)の部分積分なので、<a href="https://manabitimes.jp/math/823" target="_blank">瞬間部分積分</a> を用いて解く。
+            <li>(3)の答え：\( \sqrt{2} - 1 \)
+            <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{0}^{1} \dfrac{1}{x^2 + 1} dx & = & \displaystyle \int_{0}^{1} \dfrac{1}{\left( x + \dfrac{1}{2} \right)^2 - \dfrac{1}{4}} dx \\
+                & = & \displaystyle \int_{0}^{1} \dfrac{a}{x + \dfrac{3}{4}} + \dfrac{b}{x + \dfrac{1}{4}} dx \\
+                & = & -2\displaystyle \int_{0}^{1} \dfrac{1}{x + \dfrac{3}{4}} - \dfrac{1}{x + \dfrac{1}{4}} dx \\
+                & = & -2\left[ \log\left| x + \dfrac{3}{4} \right| - \log\left| x + \dfrac{1}{4} \right| \right]_{0}^{1}\\
+                & = & -2\left[ \log\left| \dfrac{x + \frac{3}{4}}{x + \frac{1}{4}} \right| \right]_{0}^{1} \\
+                & = & -2\left( \log\dfrac{7}{5} - \log3 \right) \\
+                & = & -2\left( \log7 - \log5 - \log3 \right)
+                \end{eqnarray} \)</li><br>
+            <li>(4)の答え：\( \dfrac{1}{3}\log2 - \dfrac{\sqrt{3}}{9}\pi \)
+            <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{0}^{1} \dfrac{1}{x^3 + 1} dx & = & \displaystyle \int_{0}^{1} \dfrac{a}{x + 1} + \dfrac{bx + c}{x^2 - x + 1} dx \\
+                & = & \dfrac{1}{3}\displaystyle \int_{0}^{1} \dfrac{1}{x + 1} - \dfrac{x - 2}{x^2 - x + 1} dx \\
+                & = & \dfrac{1}{3}\left( \displaystyle \int_{0}^{1} \dfrac{1}{x + 1} dx - \int_{0}^{1} \dfrac{x - 2}{x^2 - x + 1} dx \right)
+                \end{eqnarray} \)<br>
+                <p>ここで\( I_1 = \displaystyle \int_{0}^{1} \dfrac{1}{x + 1} dx \)、\( I_2 = \displaystyle \int_{0}^{1} \dfrac{x - 2}{x^2 - x + 1} dx \)とおくと</p><br>
+                \( \hspace{35px} \begin{eqnarray}
+                I_1 & = & \biggl[ \log|x + 1| \biggr]_{0}^{1} \\
+                & = & \log2 \\
+                I_2 & = & \dfrac{1}{2} \displaystyle \int_{0}^{1} \dfrac{2x - 1}{x^2 - x + 1} dx - \dfrac{3}{2} \displaystyle \int_{0}^{1} \dfrac{1}{x^2 - x + 1} dx
+                \end{eqnarray} \)<br>
+                <p>ここで\( I_3 = \dfrac{1}{2} \displaystyle \int_{0}^{1} \dfrac{2x - 1}{x^2 - x + 1} dx \)、\( I_4 = \dfrac{3}{2} \displaystyle \int_{0}^{1} \dfrac{1}{x^2 - x + 1} dx \)とおくと</p><br>
+                \( \hspace{35px} \begin{eqnarray}
+                I_3 & = & \dfrac{1}{2}\biggl[ \log|x^2 - x + 1| \biggr]_{0}^{1} \\
+                & = & 0 \\
+                I_4 & = & \dfrac{3}{2} \displaystyle \int_{0}^{1} \dfrac{1}{\left( x - \dfrac{1}{2} \right)^2 + \dfrac{3}{4}} dx \\
+                & = & \dfrac{3}{2} \displaystyle \int_{-\frac{\pi}{6}}^{\frac{\pi}{6}} \dfrac{1}{\dfrac{3}{4}\tan^2 \theta + \dfrac{3}{4}} \dfrac{\sqrt{3}}{2\cos^2 \theta} d\theta \\
+                & = & \dfrac{3}{2} \cdot \dfrac{4}{3} \cdot \dfrac{\sqrt{3}}{2} \displaystyle \int_{-\frac{\pi}{6}}^{\frac{\pi}{6}}  d\theta \\
+                & = & \sqrt{3}\bigl[ \theta \bigr]_{-\frac{\pi}{6}}^{\frac{\pi}{6}} \\
+                & = & \dfrac{\sqrt{3}}{3}\pi
+                \end{eqnarray} \)<br>
+                \( \hspace{35px} \begin{eqnarray}
+                \therefore I_2 & = & I_3 - I_4 \\
+                & = & -\dfrac{\sqrt{3}}{3}\pi \\
+                \end{eqnarray} \)<br>
+                \( \hspace{35px} \begin{eqnarray}
+                \therefore \displaystyle \int_{0}^{1} \dfrac{1}{x^3 + 1} dx & = & \dfrac{1}{3}\left( I_1 - I_2 \right) \\
+                & = & \dfrac{1}{3}\left( \log2 - \dfrac{\sqrt{3}}{3}\pi \right) \\
+                & = & \dfrac{1}{3}\log2 - \dfrac{\sqrt{3}}{9}\pi
+                \end{eqnarray} \)<br></li>
+            <li>(5)の答え：\( \dfrac{\pi}{8} + \dfrac{5\sqrt{2}}{2} - \dfrac{35}{12} \)</li>
+            <p>解説：</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{0}^{1} \left( x^2 + \dfrac{x}{\sqrt{1 + x^2}} \right) \biggl(1 + \dfrac{x}{(1 + x^2)\sqrt{1 + x^2}} \biggr) dx & = & \displaystyle \int_{0}^{1} x^2 + \dfrac{2x^3 + x}{(1 + x^2)\sqrt{1 + x^2}} + \dfrac{x^2}{(1 + x^2)^2} dx \\
+                \end{eqnarray} \)</li><br>
+        </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./home.js"></script>
+</body>
+</html>
