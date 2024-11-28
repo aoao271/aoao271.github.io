@@ -164,6 +164,7 @@ nav {
 
 .content-list {
     height: 100vh;
+    z-index: 1;
 }
 
 .content-choise {
