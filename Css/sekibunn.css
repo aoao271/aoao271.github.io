@@ -166,18 +166,24 @@ nav {
 }
 
 .question {
-    margin: 10px 0 10px 25px;
+    margin: 10px 25px 10px 25px;
 }
 
 .question h1 {
     font-size: 25px;
+    margin-bottom: 10px;
 }
 
 .question ul {
-    margin: 10px;
     display: grid;
     width: 100%;
     /* overflow-x: scroll; */
+}
+
+.question li {
+    padding: 15px;
+    box-shadow: 0 0 2px 1px rgb(184, 184, 184) inset;
+    border-radius: 5px;
 }
 
 ul {
