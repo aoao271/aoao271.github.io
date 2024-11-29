@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Noto Sans JP', sans-serif;
+    background-color: rgba(30,37,40,.82);
 }
 
 header a {
@@ -82,9 +83,6 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
 
     nav {
         min-height: 6vh;
@@ -140,19 +138,12 @@ nav {
     transform: rotate(405deg) translate(-5px, -6px);
 }
 
-.title {
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(30,37,40,.82);
-    height: 100vh;
-}
 
 .memo {
-    width: 95%;
-    height: 75%;
+    position: absolute;
+    top: 12.5%;
+    height: 75vh;
+    color: #fff;
     padding: 20px;
     margin-left: 5%;
     background-color: orange;
@@ -170,4 +161,8 @@ nav {
 
 .contents {
     margin-bottom: 10px;
+}
+
+.sentence {
+    overflow: scroll;
 }
