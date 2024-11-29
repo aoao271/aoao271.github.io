@@ -78,7 +78,7 @@ nav {
     }
 
     nav {
-        min-height: 7vh;
+        min-height: 60px;
     }
 
     .nav-links {

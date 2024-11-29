@@ -73,14 +73,6 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    nav {
-        min-height: 7vh;
-    }
-
     .nav-links {
         position: absolute;
         right: 0;
@@ -184,6 +176,7 @@ nav {
     padding: 15px;
     box-shadow: 0 0 2px 1px rgb(184, 184, 184) inset;
     border-radius: 5px;
+    overflow: scroll;
 }
 
 ul {
