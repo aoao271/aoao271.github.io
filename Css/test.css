@@ -164,5 +164,6 @@ nav {
 }
 
 .sentence {
-    overflow: scroll;
+    overflow-y: auto;
+    height: 250px;
 }
