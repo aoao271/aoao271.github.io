@@ -179,6 +179,10 @@ nav {
     overflow: scroll;
 }
 
+.question li::-webkit-scrollbar {
+    display: none;
+}
+
 ul {
     list-style: none;
 }
