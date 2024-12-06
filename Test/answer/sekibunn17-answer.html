@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>積を分ける積分｜解説</title>
+    <link rel="stylesheet" href="../../Css/sekibunn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p><a href="../../index.html">積を分ける積分</a></p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../App/home.html">ホーム</a></li>
+                <li><a href="../../App/test.html">今週のテスト</a></li>
+                <li><a href="../../App/past.html">過去問</a></li>
+                <li><a href="../../App/article.html">記事</a></li>
+                <li><a href="">自己満Q&A</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>           
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <p class="title-num">積分テストNo.14</p>
+        <ul>
+            <li><a href="../question/sekibunn17.html">問題</a></li>
+            <li class="Q"><a href="./sekibunn17-answer.html">解説</a></li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>参考にしたサイト➔<a href="https://examist.jp/mathematics/integral/zettaiti-teisekibun-kihon/">これ(数Ⅱ)</a>と、<a href="https://examist.jp/mathematics/integration/zettaititukiteisekibun/">これ(数Ⅲ)</a>だよ</p>
+        <h1>問題：次の式を計算せよ</h1>
+        <ul>
+            <li>(1)の答え：\( \dfrac{8\sqrt{2} - 4}{3} \)
+            <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{-2}^{0} |x^2 - 2| dx & = & \displaystyle \int_{-2}^{-\sqrt{2}} x^2 - 2 dx + \displaystyle \int_{-\sqrt{2}}^{0} -(x^2 - 2) dx \\
+                & = & \left[ \dfrac{1}{3}x^3 - 2x \right]_{-2}^{-\sqrt{2}} - \left[ \dfrac{1}{3}x^3 - 2x \right]_{-\sqrt{2}}^{0} \\
+                & = & (\dfrac{4\sqrt{2}}{3} - \dfrac{4}{3}) - (-\dfrac{4\sqrt{2}}{3}) \\
+                & = & \dfrac{8\sqrt{2} - 4}{3}
+                \end{eqnarray} \)</li><br>
+            <li>(2)の答え：\( 1 - \dfrac{1}{e} \)
+            <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{\frac{1}{2e}}^{\frac{e}{2}} |\log 2x| dx & = & \displaystyle \int_{\frac{1}{2e}}^{\frac{1}{2}} -(\log 2x) dx + \displaystyle \int_{\frac{1}{2}}^{\frac{e}{2}} \log 2x dx \\
+                & = & -\dfrac{1}{2}\left[ 2x\log 2x - 2x \right]_{\frac{1}{2e}}^{\frac{1}{2}} + \dfrac{1}{2}\left[ 2x\log 2x - 2x \right]_{\frac{1}{2}}^{\frac{e}{2}} \\
+                & = & -\dfrac{1}{2}(-1 + \dfrac{1}{e} + \dfrac{1}{e}) + \dfrac{1}{2}(e - e + 1) \\
+                & = & 1 - \dfrac{1}{e} \\
+                \end{eqnarray} \)</li><br>
+            <li>(3)の答え：\( 6\log 3 + e^3 - 14 \)
+            <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{0}^{3} |e^x - 3| dx & = & \displaystyle \int_{0}^{\log 3} -(e^x - 3) dx + \displaystyle \int_{\log 3}^{3} e^x - 3 dx \\
+                & = & -\left[ e^x - 3x \right]_{0}^{\log 3} + \left[ e^x - 3x \right]_{\log 3}^{3} \\
+                & = & -(3 - 3\log 3 - 1) + (e^3 - 9 - 3 + 3\log 3) \\
+                & = & 6\log 3 + e^3 - 14
+                \end{eqnarray} \)</li><br>
+            <li>(4)の答え：\( 1 \)
+            <p>解説：</p>
+                <p>\( \cos^2 x\sin x = (1 - \sin^2 x)\sin x = \sin x - \sin^3 x \)より\( -\sin^3 + \sin x = 0 \)を解くと
+                    \( \sin x = -1, 0, 1 \) 、\( \therefore x = -\pi, \dfrac{\pi}{2}, 0, \dfrac{\pi}{2} (-\pi \leqq x \leqq \dfrac{\pi}{2}) \)
+                </p>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{-\pi}^{\frac{\pi}{2}} |\cos^2 x\sin x| dx & = & \displaystyle \int_{-\pi}^{0} -(\cos^2 x\sin x) dx + \displaystyle \int_{0}^{\frac{\pi}{2}} \cos^2 x\sin x dx \\
+                & = & -\left[ -\dfrac{1}{3}\cos^3 x \right]_{-\pi}^{0} + \left[ -\frac{1}{3}\cos^3 x \right]_{0}^{\frac{\pi}{2}} \\
+                & = & -(-\dfrac{1}{3} - \dfrac{1}{3}) + (\dfrac{1}{3}) \\
+                & = & 1
+                \end{eqnarray} \)</li><br>
+            <li>(5)の答え：\( \dfrac{10}{\log 3} + 9 \)
+            <p>解説：</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{0}^{3} \sqrt{9^x - 2 \cdot 3^{x + 2} + 81} dx & = & \displaystyle \int_{0}^{3} \sqrt{(3^x - 9)^2} dx \\
+                & = & \displaystyle \int_{0}^{3} |3^x - 9| dx \\
+                & = & \displaystyle \int_{0}^{2} -(3^x - 9) dx + \displaystyle \int_{2}^{3} 3^x - 9 dx \\
+                & = & -\left[ \dfrac{3^x}{\log 3} - 9x \right]_{0}^{2} + \left[ \dfrac{3^x}{\log 3} - 9x \right]_{2}^{3} \\
+                & = & -(\dfrac{9}{\log 3} - 18 - \dfrac{1}{\log 3}) + (\dfrac{27}{\log 3} - 27 - \dfrac{9}{\log 3} + 18) \\
+                & = & \dfrac{10}{\log 3} + 9
+                \end{eqnarray} \)</li><br>
+        </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./home.js"></script>
+</body>
+</html>
