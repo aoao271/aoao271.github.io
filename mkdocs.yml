@@ -1,0 +1,135 @@
+site_name: 積を分ける積分
+site_description: 数学の問題集サイト
+site_url: https://aoao271.github.io/
+
+theme:
+  name: material
+  language: ja
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: ダークモードに切り替え
+    - scheme: slate
+      primary: blue grey
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: ライトモードに切り替え
+  font:
+    text: Noto Sans JP
+    code: Roboto Mono
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - navigation.instant
+    - navigation.tabs
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+  icon:
+    logo: material/math-integral-box
+
+extra_css:
+  - css/custom.css
+
+nav:
+  - ホーム: 
+    - トップページ: index.md
+    - ホーム: home.md
+  - 記事:
+    - 概要: article/index.md
+    - 微積分: article/calculus/index.md
+    - 三角関数: article/trigonometry/index.md
+    - 対数: article/logarithm/index.md
+    - 極限: article/limit/index.md
+  - 問題:
+    - 今週のテスト: tests/current/index.md
+    - 過去問:
+      - 微積分:
+        - 微分の基本: tests/archive/calculus/sekibunn1.md
+        - 微分の応用: tests/archive/calculus/sekibunn2.md
+        - 不定積分の基本: tests/archive/calculus/sekibunn3.md
+        - 定積分の基本: tests/archive/calculus/sekibunn4.md
+        - 合成関数の微分: tests/archive/calculus/sekibunn5.md
+        - 部分積分: tests/archive/calculus/sekibunn6.md
+        - 置換積分①: tests/archive/calculus/sekibunn7.md
+        - 置換積分②: tests/archive/calculus/sekibunn8.md
+        - 置換積分③: tests/archive/calculus/sekibunn9.md
+        - 置換積分の復習: tests/archive/calculus/sekibunn10.md
+        - t = tanx/2の置換積分: tests/archive/calculus/sekibunn11.md
+        - King Property: tests/archive/calculus/sekibunn12.md
+        - 微分総合: tests/archive/calculus/sekibunn13.md
+        - 区分求積法: tests/archive/calculus/sekibunn14.md
+        - 積分総合: tests/archive/calculus/sekibunn15.md
+        - 放物線で囲まれた面積: tests/archive/calculus/sekibunn16.md
+        - 絶対値の積分: tests/archive/calculus/sekibunn17.md
+    - 解答:
+      - 微積分:
+        - 微分の基本 - 解答: tests/archive/answers/sekibunn1.md
+        - 微分の応用 - 解答: tests/archive/answers/sekibunn2.md
+        - 不定積分の基本 - 解答: tests/archive/answers/sekibunn3.md
+        - 定積分の基本 - 解答: tests/archive/answers/sekibunn4.md
+        - 合成関数の微分 - 解答: tests/archive/answers/sekibunn5.md
+        - 部分積分 - 解答: tests/archive/answers/sekibunn6.md
+        - 置換積分① - 解答: tests/archive/answers/sekibunn7.md
+        - 置換積分② - 解答: tests/archive/answers/sekibunn8.md
+        - 置換積分③ - 解答: tests/archive/answers/sekibunn9.md
+        - 置換積分の復習 - 解答: tests/archive/answers/sekibunn10.md
+        - t = tanx/2の置換積分 - 解答: tests/archive/answers/sekibunn11.md
+        - King Property - 解答: tests/archive/answers/sekibunn12.md
+        - 微分総合 - 解答: tests/archive/answers/sekibunn13.md
+        - 区分求積法 - 解答: tests/archive/answers/sekibunn14.md
+        - 積分総合 - 解答: tests/archive/answers/sekibunn15.md
+        - 放物線で囲まれた面積 - 解答: tests/archive/answers/sekibunn16.md
+        - 絶対値の積分 - 解答: tests/archive/answers/sekibunn17.md
+
+plugins:
+  - search:
+      lang: ja
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      type: datetime
+      locale: ja
+  - encryptcontent:
+      password_button: True
+      password_button_text: '復号'
+      encryption_info_message: 'このページを見るにはパスワードが必要です'
+      remember_password: True
+      password_inventory:
+        classified: 'super_secret_password'
+  - awesome-pages
+  - macros
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - admonition
+  - footnotes
+  - attr_list
+  - def_list
+  - md_in_html
+  - meta
+  - tables
+  - toc:
+      permalink: true
+
+extra:
+  generator: false
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+copyright: Copyright &copy; 2024 aoao271
