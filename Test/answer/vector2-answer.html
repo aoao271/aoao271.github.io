@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>積を分ける積分｜解説</title>
+    <link rel="stylesheet" href="../../Css/sekibunn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p><a href="../../index.html">積を分ける積分</a></p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../App/home.html">ホーム</a></li>
+                <li><a href="../../App/test.html">今週のテスト</a></li>
+                <li><a href="../../App/past.html">過去問</a></li>
+                <li><a href="../../App/article.html">記事</a></li>
+                <li><a href="">自己満Q&A</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>           
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <p class="title-num">ベクトルテストNo.2</p>
+        <ul>
+            <li><a href="../question/vector2.html">問題</a></li>
+            <li class="Q"><a href="./vector2-answer.html">解説</a></li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>参考にしたサイト➔<a target="_blank" href="https://rikeilabo.com/vector-formula-list">これだよ</a></p>
+        <h1>問題：次の式を計算せよ</h1>
+        <ul>
+            <li>(1)の答え：\( 60^\circ \)
+            <p>解説：</p> 
+            \( \hspace{35px} \begin{eqnarray}
+            \cos \theta & = & \dfrac{\vec{a} \cdot \vec{b}}{|\vec{a}||\vec{b}|} \\
+            & = & \dfrac{1 \times 0 + 0 \times 1 + 1 \times 1}{\sqrt{1^2 + 0^2 + 1^2}\sqrt{0^2 + 1^2 + 1^2}} \\
+            & = & \dfrac{1}{2}
+            \end{eqnarray} \)
+            <p>\( 0^\circ \leqq \theta \leqq 180^\circ \) より</p>
+            \( \hspace{35px} \begin{eqnarray}
+            \theta & = & 60^\circ
+            \end{eqnarray} \)
+            </li><br>
+            <li>(2)の答え：\( -\dfrac{27}{4} \)
+            <p>解説：</p>
+            <p>\( \vec{a} \perp \vec{b} \) より、 \( \vec{a} \cdot \vec{b} = 0 \)</p>
+            \( \hspace{35px} \begin{eqnarray}
+            \vec{a} \cdot \vec{b} & = & 0 \\
+            & = & 3 \times 3 + 6 \times 3 + 4 \times x \\
+            x = -\dfrac{27}{4}
+            \end{eqnarray} \)
+            </li><br>
+            <li>(3)の答え：\( 2 \)
+            <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                S & = & \dfrac{1}{2}|2 \times 5 - 1 \times 6| \\
+                & = & 2
+                \end{eqnarray} \)</li><br>
+            <li>(4)の答え：\( \vec{p} = \dfrac{9}{17}\vec{a} + \dfrac{8}{17}\vec{b}, \vec{q} = 9\vec{a} - 8\vec{b} \)
+            <p>解説：</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \vec{p} & = & \dfrac{9\vec{a} + 8\vec{b}}{8 + 9} \\
+                & = & \dfrac{9}{17}\vec{a} + \dfrac{8}{17}\vec{b}
+                \end{eqnarray} \)<br>
+                \( \hspace{35px} \begin{eqnarray}
+                \vec{q} & = & \dfrac{-9\vec{a} + 8\vec{b}}{8 - 9} \\
+                & = & 9\vec{a} - 8\vec{b}
+                \end{eqnarray} \)
+            </li><br>
+            <li>(5)の答え：\( (5, 1) \)
+            <p>解説：</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \vec{g} & = & ((8 + 2 + 5) \div 3, (1 + 3 - 1) \div 3) \\
+                & = & (5, 1)
+                \end{eqnarray} \)
+            </li><br>
+        </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./home.js"></script>
+</body>
+</html>
