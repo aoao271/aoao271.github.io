@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>積を分ける積分｜解説</title>
+    <link rel="stylesheet" href="../../Css/sekibunn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p><a href="../../index.html">積を分ける積分</a></p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../App/home.html">ホーム</a></li>
+                <li><a href="../../App/test.html">今週のテスト</a></li>
+                <li><a href="../../App/past.html">過去問</a></li>
+                <li><a href="../../App/article.html">記事</a></li>
+                <li><a href="">自己満Q&A</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>           
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <p class="title-num">積分テストNo.18</p>
+        <ul>
+            <li><a href="../question/sekibunn18.html">問題</a></li>
+            <li class="Q"><a href="./sekibunn18-answer.html">解説</a></li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>参考にしたサイト➔ここだよ^^</p>
+        <h1>問題：次の式を計算せよ</h1>
+        <ul>
+            <li>(1)の答え：\( -\dfrac{1}{\sin^2 x} \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \biggl( \dfrac{1}{\tan x} \biggr)' & = & \dfrac{0 - (\tan x)'}{\tan^2 x} \\
+                & = & -\dfrac{1}{\sin^2 x}
+                \end{eqnarray} \)</li><br>
+            <li>(2)の答え：\( x^x(\log x + 1) \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                y & = & x^x \\
+                \log y & = & x\log x \\
+                \dfrac{y'}{y} & = & \log x + 1 \\
+                y' & = & y(\log x + 1) \\
+                & = & x^x(\log x + 1)
+                \end{eqnarray} \)</li>
+                <p>※別解：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                (x^x)' & = & (e^{x\log x})' \\
+                & = & e^{x\log x}(x\log x)' \\
+                & = & x^x(\log x + 1) \\
+                \end{eqnarray} \)</li><br>
+            <li>(3)の答え：\( \dfrac{16}{3} \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{0}^{4} \sqrt{x} dx & = & \left[ \dfrac{2}{3}x^{\frac{3}{2}} \right]_{0}^{4} \\
+                & = & \dfrac{16}{3} \\
+                \end{eqnarray} \)</li><br>
+            <li>(4)の答え：\( \dfrac{1}{2}\log 3 \)
+                <p>解説：</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{0}^{\frac{1}{2}} \dfrac{1}{1 - x^2} dx & = & \displaystyle \int_{0}^{\frac{1}{2}} \dfrac{1}{2}\biggr( \dfrac{1}{1 + x} + \dfrac{1}{1 - x} \biggl) dx \\
+                & = & \dfrac{1}{2}\biggl[ \log|1 + x| - \log|1 - x| \biggr]_{0}^{\frac{1}{2}} \\
+                & = & \dfrac{1}{2}\biggl[ \log\biggl| \dfrac{1 + x}{1 - x} \biggr| \biggr]_{0}^{\frac{1}{2}} \\
+                & = & \dfrac{1}{2}\log 3
+                \end{eqnarray} \)</li><br>
+            <li>(5)の答え：\( -\dfrac{1}{5}e^x\sin x\cos x + C （Cは積分定数） \)
+                <p>解説：</p>
+                \( \displaystyle \int e^x\sin x\cos x dx = I \) とすると<br>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int e^x\sin x\cos x dx & = & e^x\sin x\cos x - \displaystyle \int e^x(\sin x\cos x)' dx  \\ 
+                & = & e^x\sin x\cos x - \displaystyle \int e^x(\cos^2 x - \sin^2 x) dx  \\
+                & = & e^x\sin x\cos x - \displaystyle \int e^x\cos 2x dx  \\
+                & = & e^x\sin x\cos x - \biggl( e^x\cos 2x - \displaystyle \int e^x(\cos 2x)' dx \biggr)  \\
+                & = & e^x\sin x\cos x - \biggl( e^x\cos 2x + 2\displaystyle \int e^x\sin 2x dx \biggr)  \\
+                & = & e^x\sin x\cos x - \biggl( e^x\cos 2x + 4\displaystyle \int e^x\sin x\cos x dx \biggr)  \\
+                I & = & e^x\sin x\cos x - e^x\cos 2x - 4I \\
+                5I & = & e^x\sin x\cos x - 2e^x\sin x\cos x \\
+                5I & = & -e^x\sin x\cos x \\
+                I & = & -\dfrac{1}{5}e^x\sin x\cos x + C （Cは積分定数）
+                \end{eqnarray} \)</li><br>
+        </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./home.js"></script>
+</body>
+</html>
