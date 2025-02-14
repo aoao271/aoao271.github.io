@@ -31,71 +31,62 @@
         </nav>
     </header>
     <div class="title">
-        <p class="title-num">積分テストNo.8</p>
+        <p class="title-num">積分テストNo.12</p>
         <ul>
-            <li><a href="../question/sekibunn8.html">問題</a></li>
-            <li class="Q"><a href="./sekibunn8-answer.html">解説</a></li>
+            <li><a href="../question/sekibunn12.html">問題</a></li>
+            <li class="Q"><a href="./sekibunn12-answer.html">解説</a></li>
         </ul>
     </div>
     <div class="question">
-        <p>参考にしたサイト➔<a href="https://univ-juken.com/chikan-sekibun">置換積分法の公式やパターンを見分けるコツをわかりやすく解説 | 受験辞典</a></p>
-        <h1>問題：次の式を計算せよ</h1>
+        <p>参考にしたサイト➔<a href="https://manabitimes.jp/math/721">これだよ</a></p>
+        <h1>問題：次の式を計算せよ（問題の積分をIとおく）</h1>
         <ul>
-            <li>(1)の答え：\( \dfrac{1}{5}(x + 5)^5 - \dfrac{5}{4}(x + 5)^4 + C （Cは積分定数） \)
+            <li>(1)の答え：\( \dfrac{\pi}{4} \)
                 <p>解説：</p> 
-                <p>\( x + 5 = t \)とおくと、\( x = t - 5 \)<br>
-                \( \dfrac{dx}{dt} = 1 \)より\( dx = dt \)</p>
                 \( \hspace{35px} \begin{eqnarray}
-                \displaystyle \int x(x + 5)^3 \, dx & = & \displaystyle \int (t - 5)t^3 \, dt \\
-                & = & \displaystyle \int t^4 - 5t^3 \, dt \\
-                & = & \dfrac{1}{5}t^5 - \dfrac{5}{4}t^4 + C \\
-                & = & \dfrac{1}{5}(x + 5)^5 - \dfrac{5}{4}(x + 5)^4 + C （Cは積分定数）
+                \displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{\sin x}{\sin x + \cos x} dx & = & \displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{\cos x}{\sin x + \cos x} dx \\
+                & = & \dfrac{1}{2}\displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{\sin x + \cos x}{\sin x + \cos x} dx \\
+                & = & \dfrac{\pi}{4}
                 \end{eqnarray} \)</li><br>
-            <li>(2)の答え：\( \dfrac{1}{2}\log(e^{2x} + 2) + C （Cは積分定数） \)
+            <li>(2)の答え：\( \dfrac{\pi}{8}\log 2 \)
                 <p>解説：</p>
-                <p>\( e^{2x} + 2 = t \)とおくと、<br>
-                \( \dfrac{dt}{dx} = 2e^{2x} \)より\( dt = 2e^{2x}dx \)</p>                
                 \( \hspace{35px} \begin{eqnarray}
-                \displaystyle \int \dfrac{e^{2x}}{e^{2x} + 2} \, dx & = & \displaystyle \int \dfrac{1}{t}\dfrac{1}{2}2e^{2x} \, dx  \\
-                & = & \dfrac{1}{2}\displaystyle \int \dfrac{1}{t} \, dt \\
-                & = & \dfrac{1}{2}\log|t| + C \\
-                &&e^{2x} + 2 > 0より \\
-                & = & \dfrac{1}{2}\log(e^{2x} + 2) + C （Cは積分定数） \\
+                \displaystyle \int_{0}^{\frac{\pi}{4}} \log(1 + \tan x) dx & = & \displaystyle \int_{0}^{\frac{\pi}{4}} \log\biggl( 1 + \dfrac{1 - \tan x}{1 + \tan x} \biggr) dx  \\
+                & = & \displaystyle \int_{0}^{\frac{\pi}{4}} \log\biggl( \dfrac{2}{1 + \tan x} \biggr) dx \\
+                & = & \displaystyle \int_{0}^{\frac{\pi}{4}} \log2 - \log(1 + \tan x) dx \\
+                I & = & \displaystyle \int_{0}^{\frac{\pi}{4}} \log2 - I \\
+                2I& = & \dfrac{\pi}{4}\log 2 \\
+                & = & \dfrac{\pi}{8}\log 2 \\
                 \end{eqnarray} \)</li><br>
-            <li>(3)の答え：\( -\dfrac{1}{25\log x + 15} + C （Cは積分定数） \) 
+            <li>(3)の答え：\( \dfrac{\pi}{4} \) 
                 <p>解説：</p>
-                <p>\( \log x = t \)とおくと、<br>
-                \( \dfrac{dt}{dx} = \dfrac{1}{x} \)より\( dt = \dfrac{1}{x}dx \)</p>
                 \( \hspace{35px} \begin{eqnarray}
-                \displaystyle \int \dfrac{dx}{x(5\log x + 3)^2} & = & \displaystyle \int \dfrac{dt}{(5t + 3)^2} \\
-                & = & \displaystyle \int (5t + 3)^{-2} \, dt \\
-                & = & -(5t + 3)^{-1} \cdot \dfrac{1}{(5t + 3)'} + C \\
-                & = & -\dfrac{1}{25\log x + 15} + C （Cは積分定数）
+                \displaystyle \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \dfrac{\sin^2 x}{e^x + 1} dx & = & \displaystyle \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \dfrac{\sin^2 x}{e^{-x} + 1} dx \\
+                2I & = & \displaystyle \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \sin^2 x\biggl( \dfrac{1}{e^x + 1} + \dfrac{1}{e^{-x} + 1} \biggr) dx \\
+                I & = & \dfrac{1}{2}\displaystyle \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \sin^2 x \\
+                & = & \dfrac{1}{2}\displaystyle \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \dfrac{1 - \cos 2x}{2} \\
+                & = & \dfrac{1}{2}\displaystyle \int_{0}^{\frac{\pi}{2}} 1 - \cos 2x \\
+                & = & \dfrac{1}{2}\left[ x - \dfrac{1}{2}\sin 2x \right]_{0}^{\frac{\pi}{2}} \\
+                & = & \dfrac{\pi}{4}
                 \end{eqnarray} \)</li><br>
-            <li>(4)の答え：\( -\dfrac{125}{6} \)
+            <li>(4)の答え：\( \dfrac{\pi}{3} \)
                 <p>解説：</p>
-                <p>\( x - 3 = t \)とおくと、\( x = t + 3 \)<br>
-                \( \dfrac{dx}{dt} = 1 \)より\( dx = dt \)</p>
                 \( \hspace{35px} \begin{eqnarray}
-                \displaystyle \int_{-2}^{3} (x - 3)(x + 2) \, dx & = & \displaystyle \int_{-2}^{3} t(t + 5) \, dt \\
-                & = & \displaystyle \int_{-5}^{0} t^2 + 5t \, dt \\
-                & = & \left[ \dfrac{1}{3}t^3 + \dfrac{5}{2}t^2 \right]_{-5}^{0} \\
-                & = & 0 - (-\dfrac{125}{3} + \dfrac{125}{2}) \\
-                & = & -\dfrac{125}{6}
+                \displaystyle \int_{0}^{\pi} x\cos^2 x\sin x dx & = & \displaystyle \int_{0}^{\pi} (\pi - x)\cos^2 x\sin x dx \\
+                2I & = & \pi\displaystyle \int_{0}^{\pi} \cos^2 x\sin x dx \\
+                I & = & \dfrac{\pi}{2}\left[ -\dfrac{1}{3}\cos^3 x \right]_{0}^{\pi} \\
+                & = & \dfrac{\pi}{6} - (-\dfrac{\pi}{6}) \\
+                & = & \dfrac{\pi}{3}
                 \end{eqnarray} \)</li><br>
-            <li>(5)の答え：\( \dfrac{17}{480} \)
-                <p>解説：</p>
-                <p>\( \cos x = t \)とおくと、<br>
-                \( \dfrac{dt}{dx} = -\sin x \)より\( dt = -\sin xdx \)</p>                
+            <li>(5)の答え：\( \dfrac{\pi^2}{4} \)
+                <p>解説：</p>          
                 \( \hspace{35px} \begin{eqnarray}
-                \displaystyle \int_{\frac{\pi}{3}}^{\frac{\pi}{2}} \sin^3 x\cos^2 x \, dx & = & \displaystyle \int_{\frac{\pi}{3}}^{\frac{\pi}{2}} -\sin^2 x\cos^2 x(-\sin x) \, dx \\
-                & = & -\displaystyle \int_{\frac{\pi}{3}}^{\frac{\pi}{2}} (1 - \cos^2 x)\cos^2 x \, dt \\
-                & = & -\displaystyle \int_{\frac{\pi}{3}}^{\frac{\pi}{2}} (\cos^2 x - \cos^4 x) \, dt \\
-                & = & -\displaystyle \int_{\frac{1}{2}}^{0} (t^2 - t^4) \, dt \\
-                & = & \displaystyle \int_{0}^{\frac{1}{2}} (t^2 - t^4) \, dt \\
-                & = & \left[\dfrac{1}{3}t^3 - \dfrac{1}{5}t^5\right]_{0}^{\frac{1}{2}} \\
-                & = & \dfrac{1}{24} - \dfrac{1}{160} \\
-                & = & \dfrac{17}{480}
+                \displaystyle \int_{0}^{\pi} \dfrac{x\sin x}{1 + \cos^2 x} dx & = & \displaystyle \int_{0}^{\pi} \dfrac{(\pi - x)\sin x}{1 + \cos^2 x} dx \\
+                I & = & \dfrac{\pi}{2}\displaystyle \int_{0}^{\pi} \dfrac{\sin x}{1 + \cos^2 x} dx \\
+                & = & \dfrac{\pi}{2}\displaystyle \int_{-1}^{1} \dfrac{1}{1 + t^2} dt \\
+                & = & \pi\displaystyle \int_{0}^{1} \dfrac{1}{1 + t^2} dt \\
+                & = & \pi\displaystyle \int_{0}^{\frac{\pi}{4}} du \\
+                & = & \dfrac{\pi^2}{4}
                 \end{eqnarray} \)</li>
         </ul>
     </div>
