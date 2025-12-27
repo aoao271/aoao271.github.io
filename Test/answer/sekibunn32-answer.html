@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>積を分ける積分｜解説</title>
+    <link rel="stylesheet" href="../../Css/sekibunn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p><a href="../../index.html">積を分ける積分</a></p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../App/home.html">ホーム</a></li>
+                <li><a href="../../App/test.html">今週のテスト</a></li>
+                <li><a href="../../App/past.html">過去問</a></li>
+                <li><a href="../../App/article.html">記事</a></li>
+                <li><a href="">自己満Q&A</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>           
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <p class="title-num">積分テストNo.32</p>
+        <ul>
+            <li><a href="../question/sekibunn32.html">問題</a></li>
+            <li class="Q"><a href="./sekibunn32-answer.html">解説</a></li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>参考にしたサイト<br>
+        ➔・<a href="https://examist.jp/mathematics/random-integration/sekibun-nanmon/">高校生・受験生への挑戦状！積分最難問ランダム13題 | 受験の月</a>,<br>
+        　・<a href="https://manabitimes.jp/math/673">ルートx^2+a^2の積分計算の２通りの方法 | 高校数学の美しい物語</a></p>
+        <h1>問題：次の式を計算せよ</h1>
+        <ul>
+            <li>(1)の答え：\( \log\frac{5}{2} \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{2}^{4} \dfrac{x^2 + 1}{x^3 - x} dx & = & \displaystyle \int_{2}^{4} \dfrac{1 + \frac{1}{x^2}}{x - \frac{1}{x}} dx \\
+                & = & \left[ \log \biggl| x - \frac{1}{x} \biggr| \right]_{2}^{4} \\
+                & = & \log\frac{15}{4} - \log\frac{3}{2} \\
+                & = & \log\frac{5}{2}
+                \end{eqnarray} \)</li><br>
+            <li>(2)の答え：\( -\dfrac{1}{6}\log \biggl| 1 - \frac{1}{\sin^6 x} \biggr| + C \) 
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int \dfrac{\cos x}{\sin^7 x - \sin x} dx & = & \displaystyle \int \dfrac{\frac{1}{\sin^7 x}}{1 - \frac{1}{\sin^6 x}} \cdot \cos x dx \\
+                & = & -\dfrac{1}{6}\log \biggl| 1 - \frac{1}{\sin^6 x} \biggr| + C
+                \end{eqnarray} \)</li><br>
+            <li>(3)の答え：\( \dfrac{\pi}{2\sqrt{3}} - \dfrac{1}{2}\log 3 \)
+                <p>解説：</p> 
+                <p>\( I = \displaystyle \int_{-1}^{1} \dfrac{2x^2(e^x\sin^2 x + \cos^2 x)}{(x^4 + x^2 + 1)(e^x + 1)} dx \) とする。</p><br>
+                <p>\( \displaystyle \int_{-1}^{1} \dfrac{2x^2(e^x\sin^2 x + \cos^2 x)}{(x^4 + x^2 + 1)(e^x + 1)} dx = \displaystyle \int_{-1}^{1} \dfrac{2x^2(e^{-x}\sin^2 x + \cos^2 x)}{(x^4 + x^2 + 1)(e^{-x} + 1)} dx \) より</p>
+                \( \hspace{35px} \begin{eqnarray}
+                2I & = & \displaystyle \int_{-1}^{1} \dfrac{2x^2(e^x\sin^2 x + \cos^2 x)}{(x^4 + x^2 + 1)(e^x + 1)} dx + \displaystyle \int_{-1}^{1} \dfrac{2x^2(e^{-x}\sin^2 x + \cos^2 x)}{(x^4 + x^2 + 1)(e^{-x} + 1)} dx \\
+                & = & \displaystyle \int_{-1}^{1} \dfrac{2x^2(e^x\sin^2 x + \cos^2 x)}{(x^4 + x^2 + 1)(e^x + 1)} dx + \displaystyle \int_{-1}^{1} \dfrac{2x^2(\sin^2 x + e^x\cos^2 x)}{(x^4 + x^2 + 1)(e^x + 1)} dx \\
+                & = & \displaystyle \int_{-1}^{1} \dfrac{2x^2\{e^x(\sin^2 + \cos^2 x) + (\cos^2 + \sin^2 x)\}}{(x^4 + x^2 + 1)(e^x + 1)} dx \\
+                & = & \displaystyle \int_{-1}^{1} \dfrac{2x^2(e^x + 1)}{(x^4 + x^2 + 1)(e^x + 1)} dx \\
+                & = & \displaystyle \int_{-1}^{1} \dfrac{2x^2}{(x^4 + x^2 + 1)} dx \\
+                & = & \displaystyle \int_{-1}^{1} \biggl( \dfrac{x}{x^2 - x + 1} - \dfrac{x}{x^2 + x + 1} \biggr) dx \\
+                & = & \displaystyle \int_{-1}^{1} \biggl\{ \dfrac{1}{2}\biggl( \dfrac{2x - 1}{x^2 - x + 1} + \dfrac{1}{x^2 - x + 1} \biggr) - \dfrac{1}{2}\biggl( \dfrac{2x + 1}{x^2 + x + 1} - \dfrac{1}{x^2 + x + 1} \biggr) \biggr\} dx \\
+                & = & \dfrac{1}{2}\biggl( \left[ \log|x^2 - x + 1| - \log|x^2 + x + 1| \right]_{-1}^{1} + \displaystyle \int_{-1}^{1} \biggl( \dfrac{1}{x^2 - x + 1} + \dfrac{1}{x^2 + x + 1} \biggr) dx \biggr) \\
+                & = & \dfrac{1}{2}\biggl( -2\log 3 + \displaystyle \int_{-1}^{1} \dfrac{dx}{\Bigl( x - \dfrac{1}{2} \Bigr)^2 + \dfrac{3}{4}} + \displaystyle \int_{-1}^{1} \dfrac{dx}{\Bigl( x + \dfrac{1}{2} \Bigr)^2 + \dfrac{3}{4}} \biggr) \\
+                & = & \dfrac{1}{2}\biggl( -2\log 3 + \displaystyle \dfrac{4}{3}\dfrac{\sqrt{3}}{2}\int_{-\frac{\pi}{3}}^{\frac{\pi}{6}} d\theta_1 + \displaystyle \dfrac{4}{3}\dfrac{\sqrt{3}}{2}\int_{-\frac{\pi}{6}}^{\frac{\pi}{3}} d\theta_2 \biggr)　( x - \dfrac{1}{2} = \dfrac{\sqrt{3}}{2}\tan \theta_1, x + \dfrac{1}{2} = \dfrac{\sqrt{3}}{2}\tan \theta_1 ) \\
+                & = & \dfrac{1}{2}\biggl( -2\log 3 + \displaystyle \dfrac{4}{3}\dfrac{\sqrt{3}}{2}\left[ \theta_1 \right]_{-\frac{\pi}{3}}^{\frac{\pi}{6}} + \displaystyle \dfrac{4}{3}\dfrac{\sqrt{3}}{2}\left[ \theta_2 \right]_{-\frac{\pi}{6}}^{\frac{\pi}{3}} \biggr) \\
+                & = & \dfrac{1}{2}\biggl( -2\log 3 + \displaystyle 2 \cdot \dfrac{2}{\sqrt{3}}\Bigl( \dfrac{\pi}{6} + \dfrac{\pi}{3} \Bigr) \biggr) \\
+                & = & \dfrac{\pi}{\sqrt{3}} - \log 3 \\
+                \therefore I & = & \dfrac{\pi}{2\sqrt{3}} - \dfrac{1}{2}\log 3
+                \end{eqnarray} \)</li><br>
+            </li><br>
+            <li>(4)の答え：\( \dfrac{\sqrt{2}}{4}\pi - \dfrac{\sqrt{2}}{2}\log(\sqrt{2} + 1) \)
+                <p>解説：</p>
+                <p>\( t = \sqrt{\tan x} \)とおくと、\( t^2 = \tan x \)<br>
+                \( 2tdt = \dfrac{1}{\cos^2 x} dx \) より \( \dfrac{2t}{1 + \tan^2 x}dt = dx \Leftrightarrow \dfrac{2t}{1 + t^4}dt = dx \)<br>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{0}^{\frac{\pi}{4}} \sqrt{\tan x} dx & = & \displaystyle \int_{0}^{\frac{\pi}{4}} t \cdot \dfrac{2t}{1 + t^4}dt \\
+                & = & \dfrac{\sqrt{2}}{4}\displaystyle \int_{0}^{1} \dfrac{2t - \sqrt{2}}{t^2 - \sqrt{2}t + 1} dt + \dfrac{1}{2}\displaystyle \int_{0}^{1} \dfrac{1}{t^2 - \sqrt{2}t + 1} dt - \dfrac{\sqrt{2}}{4}\displaystyle \int_{0}^{1} \dfrac{2t + \sqrt{2}}{t^2 + \sqrt{2}t + 1} dt + \dfrac{1}{2}\displaystyle \int_{0}^{1} \dfrac{1}{t^2 + \sqrt{2}t + 1} dt \\
+                & = & \dfrac{\sqrt{2}}{4}\left[ \log\biggl| \dfrac{t^2 - \sqrt{2}t + 1}{t^2 + \sqrt{2}t + 1} \biggr| \right]_{0}^{1} + \dfrac{1}{2}\biggl( \displaystyle \int_{0}^{1} \dfrac{1}{t^2 - \sqrt{2}t + 1} dt + \displaystyle \int_{0}^{1} \dfrac{1}{t^2 + \sqrt{2}t + 1} dt \biggr) \\
+                & = & -\dfrac{\sqrt{2}}{2}\log(\sqrt{2} + 1) + \dfrac{1}{2}\biggl( \displaystyle \int_{0}^{1} \dfrac{1}{t^2 - \sqrt{2}t + 1} dt + \displaystyle \int_{0}^{1} \dfrac{1}{t^2 + \sqrt{2}t + 1} dt \biggr) \\
+                & = & -\dfrac{\sqrt{2}}{2}\log(\sqrt{2} + 1) + \dfrac{1}{2}\biggl( \displaystyle \int_{0}^{1} \dfrac{1}{(t - \frac{1}{\sqrt{2}})^2 + \frac{1}{2}} dt + \displaystyle \int_{0}^{1} \dfrac{1}{(t + \frac{1}{\sqrt{2}})^2 + \frac{1}{2}} dt \biggr) \\
+                & = & -\dfrac{\sqrt{2}}{2}\log(\sqrt{2} + 1) + \dfrac{1}{2}\biggl( \sqrt{2}\displaystyle \int_{-\frac{\pi}{4}}^{\frac{\pi}{8}} d\theta + \sqrt{2}\displaystyle \int_{\frac{\pi}{4}}^{\frac{3}{8}\pi} d\phi \biggr)　\Bigl( t - \frac{1}{\sqrt{2}} = \dfrac{1}{\sqrt{2}}\tan \theta,　t + \frac{1}{\sqrt{2}} = \dfrac{1}{\sqrt{2}}\tan \phi \Bigr) \\
+                & = & -\dfrac{\sqrt{2}}{2}\log(\sqrt{2} + 1) + \dfrac{\sqrt{2}}{2}\biggl\{ \biggl( \dfrac{\pi}{8} - \biggl( -\dfrac{\pi}{4} \biggr) \biggr) + \biggl( \dfrac{3}{8}\pi - \dfrac{\pi}{4} \biggr) \biggr\} \\
+                & = & -\dfrac{\sqrt{2}}{2}\log(\sqrt{2} + 1) + \dfrac{\sqrt{2}}{2}\biggl( \dfrac{3}{8}\pi + \dfrac{\pi}{8} \biggr) \\
+                & = & -\dfrac{\sqrt{2}}{2}\log(\sqrt{2} + 1) + \dfrac{\sqrt{2}}{4}\pi \\
+                & = & \dfrac{\sqrt{2}}{4}\pi - \dfrac{\sqrt{2}}{2}\log(\sqrt{2} + 1)
+                \end{eqnarray} \)</li><br>
+            <li>(5)の答え：\( 5\log\biggl| \dfrac{\sqrt{3 - x} - \sqrt{2 + x}}{\sqrt{3 - x} + \sqrt{2 + x}} \biggr| + C \)
+                <p>解説：</p>
+                <p>\( \sqrt{-x^2 + x + 6} = \sqrt{(3 - x)(2 + x)} = (2 + x)\sqrt{\dfrac{3 - x}{2 + x}} \)</p>
+                <p>\( t = \sqrt{\dfrac{3 - x}{2 + x}} \)とおくと、\( (2 + x)t^2 = (3 - x) \Leftrightarrow (1 + t^2)x = 3 - 2t^2 \Leftrightarrow x = \dfrac{3 - 2t^2}{1 + t^2} \)<br>
+                \( x + 2 = \dfrac{5}{1 + t^2} \) より \( dx = \dfrac{-10t}{(1 + t^2)^2} dt \)<br>
+                \( \therefore \sqrt{-x^2 + x + 6} = \dfrac{5}{1 + t^2} \cdot t = \dfrac{5t}{1 + t^2},　2x - 1 = \dfrac{5(1 - t^2)}{1 + t^2} \)</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int \dfrac{25}{(2x - 1)\sqrt{-x^2 + x + 6}} dx & = & \displaystyle \int \dfrac{25}{\dfrac{5(1 - t^2)}{1 + t^2} \cdot \dfrac{5t}{1 + t^2}} \dfrac{-10t}{(1 + t^2)^2} dt \\
+                & = & \displaystyle \int \dfrac{25}{\dfrac{25t(1 - t^2)}{(1 + t^2)^2}} \dfrac{-10t}{(1 + t^2)^2} dt \\
+                & = & -10\displaystyle \int \dfrac{1}{1 - t^2} dt \\
+                & = & 10\displaystyle \int \dfrac{1}{2}\biggl( \dfrac{1}{t - 1} - \dfrac{1}{t + 1} \biggr) dt \\
+                & = & 5(\log|t - 1| - \log|t + 1|) + C \\
+                & = & 5\log\biggl| \dfrac{t - 1}{t + 1} \biggr| + C \\
+                & = & 5\log\biggl| \dfrac{\sqrt{\dfrac{3 - x}{2 + x}} - 1}{\sqrt{\dfrac{3 - x}{2 + x}} + 1} \biggr| + C \\
+                & = & 5\log\biggl| \dfrac{\sqrt{3 - x} - \sqrt{2 + x}}{\sqrt{3 - x} + \sqrt{2 + x}} \biggr| + C
+                \end{eqnarray} \)</li>
+        </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./home.js"></script>
+</body>
+</html>
