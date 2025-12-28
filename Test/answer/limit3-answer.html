@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>積を分ける積分｜解説</title>
+    <link rel="stylesheet" href="../../Css/sekibunn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p><a href="../../index.html">積を分ける積分</a></p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../App/home.html">ホーム</a></li>
+                <li><a href="../../App/test.html">今週のテスト</a></li>
+                <li><a href="../../App/past.html">過去問</a></li>
+                <li><a href="../../App/article.html">記事</a></li>
+                <li><a href="">自己満Q&A</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>           
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <p class="title-num">極限テストNo.3</p>
+        <ul>
+            <li><a href="../question/limit3.html">問題</a></li>
+            <li class="Q"><a href="./limit3-answer.html">解説</a></li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>参考にしたサイト➔<a href="https://www.optics-words.com/math/dif/differential_k_3.html">三角関数の極限</a></p>
+        <h1>問題：次の関数を微分せよ</h1>
+        <ul>
+            <li>(1)の答え \( 3 \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \lim_{x \to 0} \dfrac{\sin 3x}{x} & = & \displaystyle \lim_{x \to 0} \dfrac{\sin 3x}{3x} \cdot 3 \\
+                & = & 1 \cdot 3 \\
+                & = & 3
+                \end{eqnarray} \)</li><br>
+            <li>(2)の答え \( 1 \) 
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \lim_{x \to \infty} x\tan \dfrac{1}{x} & = & \displaystyle \lim_{x \to \infty} \dfrac{\tan \dfrac{1}{x}}{\dfrac{1}{x}} \\
+                & = & \displaystyle \lim_{t \to 0} \dfrac{\tan t}{t}　(t = \dfrac{1}{x}) \\
+                & = & 1
+                \end{eqnarray} \)</li><br>
+            <li>(3)の答え \( \cos x \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \lim_{h \to 0} \dfrac{2\cos(x+\frac{h}{2})\sin\frac{h}{2}}{h} & = & \displaystyle \lim_{h \to 0} \dfrac{\sin(x + h) - \sin(x)}{h} \\
+                & = & \dfrac{d}{dx}\sin x \\
+                & = & \cos x
+                \end{eqnarray} \)</li><br>
+            <li>(4)の答え \( \dfrac{\pi}{180} \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \lim_{x \to 0} \dfrac{\sin x^\circ}{x} & = & \displaystyle \lim_{x^\circ \to 0} \dfrac{\sin x^\circ}{x^\circ} \cdot \dfrac{\pi}{180}　(360^\circ = 2\pi より x^\circ = \dfrac{\pi}{180}x) \\
+                & = & 1 \cdot \dfrac{\pi}{180} \\
+                & = & \dfrac{\pi}{180}
+                \end{eqnarray} \)</li><br>
+            <li>(5)の答え \( 2 \)
+                <p>解説：</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \lim_{x \to \infty} \dfrac{2x - \cos x}{x + \cos x} & = & \displaystyle \lim_{x \to \infty} \dfrac{2 - \dfrac{\cos x}{x}}{1 + \dfrac{\cos x}{x}} \\
+                \end{eqnarray} \)
+            <p>ここで\( \displaystyle \lim_{x \to \infty} \dfrac{\cos x}{x} \)について考える。</p>
+            <p>\( 0 \leqq |\cos x| \leqq 1 \) より \( x \neq 0 \) のとき</p>
+            <p>\( 0 \leqq \left| \frac{\cos x}{x}\right| = \frac{|\cos x|}{|x|} \leqq \frac{1}{|x|} \)</p>
+            <p>ここで、 \( \displaystyle\ \lim_{x \to \infty} \frac{1}{|x|}= 0 \) であることから、 \( \displaystyle \lim_{x \to \infty}\left| \frac{\cos^2 x}{x}\right| = 0 \) </p>
+            <p>\( \therefore \displaystyle \lim_{x \to \infty} \dfrac{\cos}{x} = 0 \)</p>
+            <p>したがって</p>
+            \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \lim_{x \to \infty} \dfrac{2x - \cos x}{x + \cos x}& = & \dfrac{2 - 0}{1 + 0} \\
+                & = & 2
+            \end{eqnarray} \)
+            </li>
+        </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./home.js"></script>
+</body>
+</html>
