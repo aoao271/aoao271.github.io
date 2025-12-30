@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>積を分ける積分｜解説</title>
+    <link rel="stylesheet" href="../../Css/sekibunn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p><a href="../../index.html">積を分ける積分</a></p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../App/home.html">ホーム</a></li>
+                <li><a href="../../App/test.html">今週のテスト</a></li>
+                <li><a href="../../App/past.html">過去問</a></li>
+                <li><a href="../../App/article.html">記事</a></li>
+                <li><a href="">自己満Q&A</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>           
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <p class="title-num">極限テストNo.5</p>
+        <ul>
+            <li><a href="../question/limit5.html">問題</a></li>
+            <li class="Q"><a href="./limit5-answer.html">解説</a></li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>参考にしたサイト➔<a href="https://manabitimes.jp/math/748">ロピタルの定理</a></p>
+        <h1>問題：次の関数を微分せよ</h1>
+        <ul>
+            <li>(1)の答え \( \dfrac{1}{12} \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \lim_{x \to 0} \dfrac{x - \sin x}{2x^3} & = & \displaystyle \lim_{x \to 0} \dfrac{1 - \cos x}{6x^2} \\
+                & = & \displaystyle \lim_{x \to 0} \dfrac{\sin x}{12x} \\
+                & = & \displaystyle \lim_{x \to 0} \dfrac{\cos x}{12} \\
+                & = & \dfrac{1}{12}
+                \end{eqnarray} \)</li><br>
+            <li>(2)の答え \( 0 \) 
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \lim_{x \to \infty} \dfrac{\log x}{x} & = & \displaystyle \lim_{x \to \infty} \dfrac{\frac{1}{x}}{1} \\
+                & = & \displaystyle \lim_{x \to \infty} \dfrac{1}{x} \\
+                & = & 0
+                \end{eqnarray} \)</li><br>
+            <li>(3)の答え \( 1 \)
+                <p>解説：</p>
+                <p>\( y = x^{\frac{1}{x}} \) とおく。両辺に対数をかけると</p>
+                <p>\[ \log y = \dfrac{\log x}{x} \]</p>
+                <p>したがって(1)より \( \displaystyle \lim_{x \to \infty} \log y = 0 \)</p>
+                <p>\[ \therefore y = 1 \]</p>
+            </li><br>
+            <li>(4)の答え \( 1 \)
+                <p>解説：</p>
+                <p>\( (与式) = \displaystyle \lim_{x \to \infty} 1 - \dfrac{\cos x}{x} から、まず \displaystyle \lim_{x \to \infty} \dfrac{\cos x}{x} を解く。 \)</p>
+                <p>\( -1 \leqq \cos x \leqq 1 より \)</p>
+                <p>\[ -\dfrac{1}{x} \leqq \dfrac{\cos x}{x} < \dfrac{1}{x} \]</p>
+                <p>\( \displaystyle \lim_{x \to \infty} -\dfrac{1}{x} = \displaystyle \lim_{x \to \infty} \dfrac{1}{x} = 0 より \)</p>
+                <p>\[ \displaystyle \lim_{x \to \infty} \dfrac{\cos x}{x} = 0 \]</p>
+                <p>\[ \therefore \displaystyle \lim_{x \to \infty} 1 - \dfrac{\cos x}{x} = 1 - 0 = 1 \]</p>
+            </li><br>
+            <li>(5)の答え \( -2 \)
+                <p>解説：</p>
+                <p>\( t = \dfrac{x - 1}{x + 1} \) とおくと、 \( x = \dfrac{1 + t}{1 - t} \)</p>
+                <p>また、 \( t = \dfrac{1 - \dfrac{1}{x}}{1 + \dfrac{1}{x}} \) と変形すると、 \( x \rightarrow \infty \) のとき \( t \rightarrow 1 \)</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \therefore \displaystyle \lim_{x \to \infty} x\log \biggl( \dfrac{x-1}{x+1} \biggr) & = & \displaystyle \lim_{t \to 1} \dfrac{1 + t}{1 - t}\log t \\
+                & = & \displaystyle \lim_{t \to 1} \dfrac{(1 + t)\log t}{1 - t} \\
+                & = & \displaystyle \lim_{t \to 1} \dfrac{\log t + \dfrac{1 + t}{t}}{-1} \\
+                & = & \dfrac{0 + 2}{-1} \\
+                & = & -2
+                \end{eqnarray} \)</li>
+                <p>\[  \]</p>
+            </li>
+        </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./home.js"></script>
+</body>
+</html>

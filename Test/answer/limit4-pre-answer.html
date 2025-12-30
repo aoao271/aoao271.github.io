@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>積を分ける積分｜解説</title>
+    <link rel="stylesheet" href="../../Css/sekibunn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p><a href="../../index.html">積を分ける積分</a></p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../App/home.html">ホーム</a></li>
+                <li><a href="../../App/test.html">今週のテスト</a></li>
+                <li><a href="../../App/past.html">過去問</a></li>
+                <li><a href="../../App/article.html">記事</a></li>
+                <li><a href="">自己満Q&A</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>           
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <p class="title-num">極限テストNo.4＋</p>
+        <ul>
+            <li><a href="../question/limit4-pre.html">問題</a></li>
+            <li class="Q"><a href="./limit4-pre-answer.html">解説</a></li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>参考にしたサイト➔<a href="https://manabitimes.jp/math/1109">微分公式一覧（基礎から発展まで） | 高校数学の美しい物語</a></p>
+        <h1>問題：次の関数を微分せよ</h1>
+        <ul>
+            <li>(1)の答え \( \dfrac{1}{e} \)
+                <p>解説：</p>
+                <p>\( y = x^{\frac{1}{1 - x}} \) とおく。両辺に対数をかけると</p>
+                <p>\[ \log y = \dfrac{\log x}{1 - x} \]</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \therefore \displaystyle \lim_{x \to 1} \dfrac{\log x}{1 - x} & = & \displaystyle \lim_{x \to 1} \dfrac{\frac{1}{x}}{-1} \\
+                & = & \displaystyle \lim_{x \to 1} -\dfrac{1}{x} \\
+                & = & -1
+                \end{eqnarray} \)
+                <p>したがって、 \[ \displaystyle \lim_{x \to 1} \log y = -1 \]</p>
+                <p>\[ \therefore y = \dfrac{1}{e} \]</p>
+            </li><br>
+            <li>(2)の答え \( e^2 \) 
+                <p>解説：</p>
+                <p>\( t = \dfrac{1}{x} \) とおくと、 \( x \rightarrow 0 \) のとき \( t \rightarrow \infty \)</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \lim_{x \to 0} \biggl( \dfrac{1 + x}{1 - x} \biggr)^{\frac{1}{x}} & = & \displaystyle \lim_{x \to 0} \biggl( \dfrac{\dfrac{1}{x} + 1}{\dfrac{1}{x} - 1} \biggr)^{\frac{1}{x}} \\
+                & = & \displaystyle \lim_{t \to \infty} \biggl( \dfrac{t + 1}{t - 1} \biggr)^t \\
+                & = & \displaystyle \lim_{t \to \infty} \biggl( 1 + \dfrac{2}{t - 1} \biggr)^{t - 1} \cdot \biggl( 1 + \dfrac{2}{t - 1} \biggr) \\
+                & = & e^2 \cdot (1 + 0) \\
+                & = & e^2
+                \end{eqnarray} \)</li><br>
+            <li>(3)の答え \( \dfrac{1}{\log a}　(a \gt 0, a \neq 0) \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \lim_{x \to 0} \dfrac{\log_a(1 + x)}{x} & = & \displaystyle \lim_{x \to 0} \log_a(1 + x)^{\frac{1}{x}} \\
+                & = & \log_a e \\
+                & = & \dfrac{1}{\log a}　(a \gt 0, a \neq 0)
+                \end{eqnarray} \)</li><br>
+            <li>(4)の答え \( \log a　(a \gt 0, a \neq 0) \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \lim_{x \to 0} \dfrac{a^x - 1}{x} & = & \displaystyle \lim_{x \to 0} \dfrac{a^x\log a}{1} \\
+                & = & \log a　(a \gt 0, a \neq 0)
+                \end{eqnarray} \)
+                <p>別解：</p>
+                <p>\[ \displaystyle \lim_{X \to 0} \log_a (1 + X)^{\frac{1}{X}} = \log_a e \]</p>
+                <p>\[ \Longleftrightarrow \displaystyle \lim_{X \to 0} \dfrac{\log_a (1 + X)}{X} = \dfrac{1}{\log a} \]</p>
+                <p>\[ \Longleftrightarrow \displaystyle \lim_{X \to 0} \dfrac{X}{\log_a (1 + X)} = \log a \]</p>
+                <p>ここで \( \log_a (1 + X) = t \) とおくと、 \( a^t = 1 + X \Longleftrightarrow X = a^t - 1 \)</p>
+                <p>また、\( X \rightarrow 0 \) のとき \( t \rightarrow 0 \)</p>
+                <p>したがって、</p>
+                <p>\[ \Longleftrightarrow \displaystyle \lim_{t \to 0} \dfrac{a^t - 1}{t} = \log a \]</p>
+                <p>\[ \therefore \displaystyle \lim_{x \to 0} \dfrac{a^x - 1}{x} = \log a　(a \gt 0, a \neq 0) \]</p>
+            </li><br>
+            <li>(5)の答え \( \log \dfrac{a}{b}　(a \gt 0, b \gt 0) \)
+                <p>解説：</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \lim_{x \to 0} \dfrac{a^x - b^x}{x} & = & \displaystyle \lim_{x \to 0} \biggl( \dfrac{a^x - 1}{x} - \dfrac{b^x - 1}{x} \biggr) \\
+                & = & \log a - \log b \\
+                & = & \log \dfrac{a}{b}　(a \gt 0, b \gt 0)
+                \end{eqnarray} \)
+            </li>
+        </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./home.js"></script>
+</body>
+</html>
