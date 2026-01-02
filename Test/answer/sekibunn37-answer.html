@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>積を分ける積分｜解説</title>
+    <link rel="stylesheet" href="../../Css/sekibunn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p><a href="../../index.html">積を分ける積分</a></p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../App/home.html">ホーム</a></li>
+                <li><a href="../../App/test.html">今週のテスト</a></li>
+                <li><a href="../../App/past.html">過去問</a></li>
+                <li><a href="../../App/article.html">記事</a></li>
+                <li><a href="">自己満Q&A</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>           
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <p class="title-num">積分テストNo.37</p>
+        <ul>
+            <li><a href="../question/sekibunn37.html">問題</a></li>
+            <li class="Q"><a href="./sekibunn37-answer.html">解説</a></li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>参考にしたサイト<br>
+            ➔・<a target="_blank" href="https://manabitimes.jp/math/1548">部分積分</a>,
+            <a target="_blank" href="https://univ-juken.com/chikan-sekibun">置換積分</a>,
+            <a target="_blank" href="https://hiraocafe.com/note/integrals-even-odd-functions.html">King Property</a>,
+            <a target="_blank" href="https://manabitimes.jp/math/721">偶・奇関数の積分</a></p>
+        <h1>問題：次の式を計算せよ</h1>
+        <ul>
+            <li>(1)の答え：\( \dfrac{3}{2} + \log 2 \)
+                <p>解説：</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{1}^{2} \dfrac{e^{\log (x^2 + 1)}}{x} dx & = & \displaystyle \int_{1}^{2} \dfrac{x^2 + 1}{x} dx \\
+                & = & \displaystyle \int_{1}^{2} \biggl( x + \dfrac{1}{x} \biggr) dx \\
+                & = & \left[ \dfrac{1}{2}x^2 + \log x \right]_{1}^{2} \\
+                & = & \biggl( 2 + \log 2 \biggr) - \biggl( \dfrac{1}{2} + 0 \biggr) \\
+                & = & \dfrac{3}{2} + \log 2
+                \end{eqnarray} \)</li><br>
+            <li>(2)の答え：\( \dfrac{1}{10}e^x(\sin 2x - 2\cos 2x) \)
+                <p>解説：</p>
+                <p>\( I = \displaystyle \int e^x\sin x\cos x \) とおく。</p>
+                \( \hspace{35px} \begin{eqnarray}
+                I & = & \dfrac{1}{2} \displaystyle \int e^x\sin 2x \\
+                & = & \dfrac{1}{2}e^x\sin 2x - \displaystyle \int e^x\cos 2x \\
+                & = & \dfrac{1}{2}e^x\sin 2x - (e^x\cos 2x + 2\displaystyle \int e^x\sin 2x) \\
+                I & = & \dfrac{1}{2}e^x\sin 2x - e^x\cos 2x - 4I \\
+                5I & = & \dfrac{1}{2}e^x\sin 2x - e^x\cos 2x \\
+                I& = & \dfrac{1}{10}e^x(\sin 2x - 2\cos 2x)
+                \end{eqnarray} \)</li><br>
+            <li>(3)の答え：\( 0 \) 
+                <p>解説：</p>
+                <p>\( I = \displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{\sin x}{\sin^3 x - \cos^3 x} dx \) とおく。</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{\sin x}{\sin^3 x - \cos^3 x} dx & = & \displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{\sin (0 + \frac{\pi}{2} - x)}{\sin^3 (0 + \frac{\pi}{2} - x) - \cos^3 (0 + \frac{\pi}{2} - x)} dx \\
+                & = & \displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{\cos x}{\sin^3 x - \cos^3 x} dx より
+                \end{eqnarray} \)<br>
+                \( \hspace{35px} \begin{eqnarray}
+                I + I & = & \displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{\sin x + \cos x}{\sin^3 x - \cos^3 x} dx \\
+                2I & = & \displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{\sin x + \cos x}{(\sin x + \cos x)(\sin^2 x + \sin x\cos x + \cos^2 x)} dx \\
+                I & = & \dfrac{1}{2}\displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{\sin x + \cos x}{(\sin x - \cos x)(1 + \sin x\cos x)} dx \\
+                & = & \dfrac{1}{2}\displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{\sin x + \cos x}{(\sin x - \cos x)(1 + \dfrac{1 - \{\sin x - \cos x\}^2}{2})} dx \\
+                & = & \displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{\sin x + \cos x}{(\sin x - \cos x)\{3 - (\sin x - \cos x)^2\}} dx \\
+                & = & \displaystyle \int_{-1}^{1} \dfrac{1}{t(3 - t^2)} dt　(t = \sin x - \cos x, dt = (\sin x + \cos x)dx) \\
+                & = & \displaystyle \int_{-1}^{1} \dfrac{1}{3t - t^3} dt \\
+                & = & 0　(\because y = \dfrac{1}{3t - t^3} は奇関数)
+                \end{eqnarray} \)</li><br>
+            <li>(4)の答え：\( \biggl( \dfrac{1}{12 - 48x^3} \biggr)\log(x^4 - x) +\dfrac{1}{36}\log\biggl| 1 - \dfrac{1}{x^3} \biggr| + C \)
+                <p>解説：</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int \biggl( \dfrac{x}{4x^3 - 1} \biggr)^2\log(x^4 - x) dx & = & \displaystyle \int \dfrac{x^2}{(4x^3 - 1)^2}\log(x^4 - x) dx \\
+                & = & \displaystyle \int -\dfrac{1}{12}\biggl( \dfrac{1}{4x^3 - 1} \biggr)'\log(x^4 - x) dx \\
+                & = & -\dfrac{1}{12}\biggl( \dfrac{1}{4x^3 - 1} \biggr)\log(x^4 - x) + \dfrac{1}{12}\displaystyle \int \biggl( \dfrac{1}{4x^3 - 1} \biggr)\dfrac{4x^3 - 1}{x^4 - x} dx \\
+                & = & \biggl( \dfrac{1}{12 - 48x^3} \biggr)\log(x^4 - x) +\dfrac{1}{12}\displaystyle \int \dfrac{1}{x^4 - x} dx \\
+                & = & \biggl( \dfrac{1}{12 - 48x^3} \biggr)\log(x^4 - x) +\dfrac{1}{36}\displaystyle \int \dfrac{\dfrac{3}{x^4}}{1 - \dfrac{1}{x^3}} dx \\
+                & = & \biggl( \dfrac{1}{12 - 48x^3} \biggr)\log(x^4 - x) +\dfrac{1}{36}\log\biggl| 1 - \dfrac{1}{x^3} \biggr| + C
+                \end{eqnarray} \)</li><br>
+            <li>(5)の答え：\( \dfrac{4}{3}\biggl( \dfrac{1 + \log 2}{1 - \log 2}\sqrt{\dfrac{1 + \log 2}{1 - \log 2}} - 1 \biggr) \)
+                <p>解説：</p>
+                <p>\( t = \sqrt{\dfrac{1 + \log x}{1 - \log x}} \)とおくと、\( (1 - \log x)t^2 = (1 + \log x) \Leftrightarrow (t^2 + 1)\log x = t^2 - 1 \Leftrightarrow \log x = \dfrac{t^2 - 1}{t^2 + 1} \)<br>
+                \( 1 - \log x = \dfrac{2}{t^2 + 1} \) より \( -\dfrac{1}{x}dx = \dfrac{-4t}{(t^2 + 1)^2} dt \Leftrightarrow \dfrac{1}{x}dx = \dfrac{4t}{(t^2 + 1)^2} dt \)<br>
+                \( \therefore \dfrac{1}{1 - \log x} = t^2 + 1 \)</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{1}^{2} \dfrac{1}{x(1 - \log x)^2}\sqrt{\dfrac{1 + \log x}{1 - \log x}} dx & = & \displaystyle \int_{1}^{\sqrt{\frac{1 + \log 2}{1 - \log 2}}} (t^2 + 1)^2t \dfrac{4t}{(t^2 + 1)^2} dt \\
+                & = & \displaystyle \int_{1}^{\sqrt{\frac{1 + \log 2}{1 - \log 2}}} 4t^2 dt \\
+                & = & \left[ \dfrac{4}{3}t^3 \right]_{1}^{\sqrt{\frac{1 + \log 2}{1 - \log 2}}} \\
+                & = & \dfrac{4}{3}\biggl( \dfrac{1 + \log 2}{1 - \log 2}\sqrt{\dfrac{1 + \log 2}{1 - \log 2}} - 1 \biggr)
+                \end{eqnarray} \)</li>
+        </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./home.js"></script>
+</body>
+</html>
