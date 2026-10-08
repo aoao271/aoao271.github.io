@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>積を分ける積分｜解説</title>
+    <link rel="stylesheet" href="../../Css/sekibunn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p><a href="../../index.html">積を分ける積分</a></p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../App/home.html">ホーム</a></li>
+                <li><a href="../../App/test.html">今週のテスト</a></li>
+                <li><a href="../../App/past.html">過去問</a></li>
+                <li><a href="../../App/article.html">記事</a></li>
+                <li><a href="">自己満Q&A</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>           
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <p class="title-num">積分テストNo.51</p>
+        <ul>
+            <li><a href="../question/sekibunn51.html">問題</a></li>
+            <li class="Q"><a href="./sekibunn51-answer.html">解説</a></li>
+        </ul>
+    </div>
+    <div class="question">
+        <h1>問題：次の式を計算せよ</h1>
+        <ul>
+            <li>(1)の答え：\( \dfrac{\pi}{4} - \dfrac{2}{3} \)
+                <p>解説：</p>
+                <h4>point:King Property</h4>
+                <p>\( I = \displaystyle \int_{-\frac{\pi}{4}}^{\frac{\pi}{4}} \dfrac{\tan^4 x}{e^x + 1} dx \) とおく。</p>
+                \( \hspace{35px} \begin{eqnarray}
+                I & = & \displaystyle \int_{-\frac{\pi}{4}}^{\frac{\pi}{4}} \dfrac{\tan^4 x}{e^{-x} + 1} dx \\
+                & = & \displaystyle \int_{-\frac{\pi}{4}}^{\frac{\pi}{4}} \dfrac{e^x\tan^4 x}{e^x + 1} dx \\
+                \therefore 2I & = & \displaystyle \int_{-\frac{\pi}{4}}^{\frac{\pi}{4}} \dfrac{\tan^4 x}{e^x + 1} dx + \displaystyle \int_{-\frac{\pi}{4}}^{\frac{\pi}{4}} \dfrac{e^x\tan^4 x}{e^x + 1} dx \\
+                I & = & \dfrac{1}{2}\displaystyle \int_{-\frac{\pi}{4}}^{\frac{\pi}{4}} \tan^4 x dx \\
+                & = & \dfrac{1}{2}\displaystyle \int_{-\frac{\pi}{4}}^{\frac{\pi}{4}} \tan^2 x\bigg( \dfrac{1}{\cos^2 x} - 1 \bigg) dx \\
+                & = & \dfrac{1}{2}\displaystyle \int_{-\frac{\pi}{4}}^{\frac{\pi}{4}} \bigg( \dfrac{\tan^2 x}{\cos^2 x} - \dfrac{1}{\cos^2 x} + 1 \bigg) dx \\
+                & = & \left[ \dfrac{\tan^3 x}{3} - \tan x + x \right]_{0}^{\frac{\pi}{4}}　(\because 偶関数) \\
+                & = & \bigg( \dfrac{1}{3} - 1 + \dfrac{\pi}{4} \bigg) - 0 \\
+                & = & \dfrac{\pi}{4} - \dfrac{2}{3}
+                \end{eqnarray} \)</li><br>
+            <li>(2)の答え：\( \dfrac{x^2}{\log x} + C \)
+                <p>解説：</p>
+                <h4>point:微分結果の予測</h4>
+                <p>\( t = \log x \)とおくと、\( e^t = x, e^tdt = dx \)</p><br>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int \dfrac{x(2\log x - 1)}{(\log x)^2} dx & = & \displaystyle \int \dfrac{e^{2t}(2t - 1)}{t^2} dt \\
+                & = & \displaystyle \int \dfrac{2te^{2t} - e^{2t}}{t^2} dt \\
+                & = & \dfrac{e^{2t}}{t} + C \\
+                & = & \dfrac{x^2}{\log x} + C
+                \end{eqnarray} \)</li><br>
+            <li>(3)の答え：\( \dfrac{11}{8}\pi \) 
+                <p>解説：</p>
+                <h4>point:等比数列の和</h4>
+                \( \hspace{35px} \begin{flalign}
+                & \displaystyle \int_{0}^{\frac{\pi}{2}} (\sin 2x\cos x + \sin 2x + 2\sin x)(\sin 2x\cos x - \sin 2x + 2\sin x) dx \\
+                & = \displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{2\sin x(1 - \cos^3 x)}{1 - \cos x}\dfrac{2\sin x(1 - (-\cos x)^3)}{1 - (-\cos x)} dx \\
+                & = 4\displaystyle \int_{0}^{\frac{\pi}{2}} (1 - \cos^6 x) dx \\
+                & = 4\bigg( \dfrac{\pi}{2} - \dfrac{5!!}{6!!}\dfrac{\pi}{2} \bigg) \\
+                & = 2\pi\bigg( 1 - \dfrac{5 \cdot 3 \cdot 1}{6 \cdot 4 \cdot 2} \bigg) \\
+                & = \dfrac{11}{8}\pi
+                \end{flalign} \)</li><br>
+            <li>(4)の答え：\( \dfrac{\sqrt{3}}{8}\log3 - \dfrac{\pi}{12} \)
+                <p>解説：</p>
+                <h4>point:逆関数っぽい形だと思うべし。</h4>
+                <p>
+                    \( \hspace{35px} \begin{eqnarray}
+                    y & = & \log\bigg( \dfrac{1 + \sqrt{1 - 4x^2}}{2x} \bigg) とおくと、 \\
+                    e^y & = &  \dfrac{1 + \sqrt{1 - 4x^2}}{2x} \\
+                    2xe^y - 1 & = & \sqrt{1 - 4x^2} \\
+                    4x^2e^{2y} - 4xe^y + 1 & = & 1 - 4x^2 \\
+                    (e^{2y} + 1)x^2 - e^yx & = & 0 \\
+                    \therefore x & = & \dfrac{e^y}{e^{2y} + 1}
+                    \end{eqnarray} \)
+                </p>
+                <table border="1" style="border-collapse: collapse;">
+                    <tr>
+                        <th>\( x \)</th>
+                        <th>\( \frac{1}{2} \to \frac{\sqrt{3}}{4} \)</th>
+                    </tr>
+                    <tr>
+                        <th>\( y \)</th>
+                        <th>\( 0 \to \log\sqrt{3} \)</th>
+                    </tr>
+                </table><p>より</p><br>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int_{\frac{1}{2}}^{\frac{\sqrt{3}}{4}} \log\bigg( \dfrac{1 + \sqrt{1 - 4x^2}}{2x} \bigg) dx & = & \bigg( \frac{\sqrt{3}}{4}\log\sqrt{3} - \frac{1}{2} \cdot 0 \bigg) - \displaystyle \int_{0}^{\log\sqrt{3}} \dfrac{e^y}{e^{2y} + 1} dy \\
+                & = & \dfrac{\sqrt{3}}{4}\log\sqrt{3} - \displaystyle \int_{1}^{\sqrt{3}} \dfrac{1}{t^2 + 1} dt　(\because t = e^y) \\
+                & = & \dfrac{\sqrt{3}}{8}\log3 - \bigg[ \theta \bigg]_{\frac{\pi}{4}}^{\frac{\pi}{3}}　(\because t = \tan \theta) \\
+                & = & \dfrac{\sqrt{3}}{8}\log3 - \dfrac{\pi}{12}
+                \end{eqnarray} \)</li><br>
+            <li>(5)の答え：\( \dfrac{1}{\sqrt{3}}\log\bigg| \dfrac{x + \sqrt{x^2 - 1} + 2 -\sqrt{3}}{x + \sqrt{x^2 - 1} + 2 + \sqrt{3}} \bigg| + C \)
+                <p>解説：</p>
+                <h4>point:\( \displaystyle \int \dfrac{1}{\sqrt{x^2 + a}} dx \) 型の積分方法を考える。</h4><br>
+                <p>\( t = \log(x + \sqrt{x^2 - 1}) \)とおくと、\( dt = \dfrac{1}{\sqrt{x^2 - 1}} dx \)</p><br>
+                <p>
+                    \( \hspace{35px} \begin{eqnarray}
+                    また　t = \log(x + \sqrt{x^2 - 1}) \\
+                    e^t & = & x + \sqrt{x^2 - 1} \\
+                    e^t - x & = & \sqrt{x^2 - 1} \\
+                    e^{2t} - 2xe^t + x^2 & = & x^2 - 1 \\
+                    e^{2t} + 1 & = & 2xe^t \\
+                    \therefore x & = & \dfrac{e^t + e^{-t}}{2} \\
+                    x + 2 & = & \dfrac{e^t + e^{-t} + 4}{2}
+                    \end{eqnarray} \)
+                </p><br>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int \dfrac{dx}{(x + 2)\sqrt{x^2 - 1}} & = & \displaystyle \int \dfrac{2}{e^t + e^{-t} + 4} dt \\
+                & = & \displaystyle \int \dfrac{2e^t}{e^{2t} + 4e^t + 1} dt \\
+                & = & \displaystyle \int \dfrac{2}{u^2 + 4u + 1} du　(\because u = e^t) \\
+                & = & \displaystyle \int \dfrac{2}{(u + 2)^2 - (\sqrt{3})^2} du \\
+                & = & \dfrac{1}{\sqrt{3}}\displaystyle \int \bigg\{ \dfrac{1}{(u + 2) - \sqrt{3}} - \dfrac{1}{(u + 2) + \sqrt{3}} \bigg\} du \\
+                & = & \dfrac{1}{\sqrt{3}}\log\bigg| \dfrac{u + 2 -\sqrt{3}}{u + 2 + \sqrt{3}} \bigg| + C \\
+                & = & \dfrac{1}{\sqrt{3}}\log\bigg| \dfrac{e^t + 2 -\sqrt{3}}{e^t + 2 + \sqrt{3}} \bigg| + C \\
+                & = & \dfrac{1}{\sqrt{3}}\log\bigg| \dfrac{x + \sqrt{x^2 - 1} + 2 -\sqrt{3}}{x + \sqrt{x^2 - 1} + 2 + \sqrt{3}} \bigg| + C
+                \end{eqnarray} \)
+                <h3>※補足</h3>
+                <p><a href="https://aoao271.github.io/Test/question/sekibunn23.html">積分No.23</a>と<a href="https://aoao271.github.io/Test/question/sekibunn32.html">積分No.32</a>の(5)の置換方法でも同様に解けるので、興味がある人はその方法でも解いてみてね。<br>
+                (積分定数の影響でここでの答えと少し違うかもしれないから、定積分にして値が合ってるか検算してみてね)</p>
+            </li>
+        </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./home.js"></script>
+</body>
+</html>
