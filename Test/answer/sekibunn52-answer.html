@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>積を分ける積分｜解説</title>
+    <link rel="stylesheet" href="../../Css/sekibunn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p><a href="../../index.html">積を分ける積分</a></p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../App/home.html">ホーム</a></li>
+                <li><a href="../../App/test.html">今週のテスト</a></li>
+                <li><a href="../../App/past.html">過去問</a></li>
+                <li><a href="../../App/article.html">記事</a></li>
+                <li><a href="">自己満Q&A</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>           
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <p class="title-num">積分テストNo.52</p>
+        <ul>
+            <li><a href="../question/sekibunn52.html">問題</a></li>
+            <li class="Q"><a href="./sekibunn52-answer.html">解説</a></li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>参考にしたサイト<br>
+        ➔・<a target="_blank" href="https://manabitimes.jp/math/1548">部分積分</a>,
+        <a target="_blank" href="https://univ-juken.com/chikan-sekibun">置換積分</a>,
+        <a target="_blank" href="https://hiraocafe.com/note/integrals-even-odd-functions.html">King Property</a>,
+        <a target="_blank" href="https://manabitimes.jp/math/721">偶・奇関数の積分</a></p>
+        <h1>問題：次の式を計算せよ</h1>
+        <ul>
+            <li>(1)の答え：\( \dfrac{x - \log |\sin x + \cos x|}{2} + C \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int \dfrac{\sin x}{\sin x + \cos x} dx & = & \dfrac{1}{2} \displaystyle \int \bigg( \dfrac{\sin x + \cos x}{\sin x + \cos x} - \dfrac{\cos x - \sin x}{\sin x + \cos x} \bigg) dx \\
+                & = & \dfrac{1}{2} \displaystyle \int \bigg( 1 - \dfrac{\cos x - \sin x}{\sin x + \cos x} \bigg) dx \\
+                & = & \dfrac{x - \log |\sin x + \cos x|}{2} + C
+                \end{eqnarray} \)</li><br>
+            <li>(2)の答え：\( -\log (e^{-x} + 1) + C \) 
+                <p>解説：</p>
+                \( \hspace{35px} \begin{eqnarray}
+                \displaystyle \int \dfrac{1}{e^x + 1} dx & = & \displaystyle \int \dfrac{e^{-x}}{e^{-x} + 1} dx \\
+                & = & -\log (e^{-x} + 1) + C
+                \end{eqnarray} \)</li><br>
+            <li>(3)の答え：\( \dfrac{25}{4}\pi \)
+                <p>解説：</p>
+                <p>\( y = \sqrt{25 - x^2} \)といて式変形すると \( x^2 + y^2 = 25 \) <br>
+                これは原点中心半径 \( 5 \) の円である。 <br>
+                よって積分が示すのは先程示した円の第一象限での面積である。</p>
+                \( \therefore \displaystyle \int_{0}^{5} \sqrt{25 - x^2} dx = 5^2\pi \times \dfrac{1}{4} = \dfrac{25}{4}\pi \)</li><br>
+            <li>(4)の答え：\( 0 \)
+                <p>解説：</p>
+                <p>グラフをイメージすると簡単</p>
+                <img src="/image2.png" alt="\( y = \sin 2x \) のグラフ" width="500">
+                <p>図より \( S1 = S2 \) だから値は \( 0 \)</p>
+            </li><br>
+            <li>(5)の答え：\( 0 \)
+                <p>解説：</p> 
+                <p>
+                    \( \hspace{35px} \begin{flalign}
+                    & \displaystyle \int_{0}^{2\pi} \sin 2026x \cos 1010x dx \\
+                    & = \displaystyle \int_{0}^{2\pi} \dfrac{1}{2} \bigg( \sin 3036x + \sin 1016x \bigg) dx \\
+                    & = \dfrac{1}{2} \bigg( \displaystyle \int_{0}^{2\pi} \sin 3036x dx + \displaystyle \int_{0}^{2\pi} \sin 1016x dx \bigg)
+                    \end{flalign} \) <br>
+                    (4)と同様に考えると... <br>
+                    sinカーブの凹凸が打ち消し合い、かつ範囲が \( [0,2\pi] \) より <br>
+                    \( \hspace{35px} \begin{flalign}
+                    & = \dfrac{1}{2} \bigg( 0 + 0 \bigg) \\
+                    & = 0
+                    \end{flalign} \)
+                </p><br><br><br>
+                <p>
+                    <h3>※蛇足</h3>
+                    <img src="/image.png" alt="\( y = \sin 3036x \) のグラフ" width="500"><br>
+                    \( y = \sin 3036x \) 描画したら滅茶苦茶パソコン重くなった(´・ω・`)
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./home.js"></script>
+</body>
+</html>
