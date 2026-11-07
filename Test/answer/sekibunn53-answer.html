@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>積を分ける積分｜解説</title>
+    <link rel="stylesheet" href="../../Css/sekibunn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p><a href="../../index.html">積を分ける積分</a></p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../App/home.html">ホーム</a></li>
+                <li><a href="../../App/test.html">今週のテスト</a></li>
+                <li><a href="../../App/past.html">過去問</a></li>
+                <li><a href="../../App/article.html">記事</a></li>
+                <li><a href="">自己満Q&A</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>           
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <p class="title-num">積分テストNo.53</p>
+        <ul>
+            <li><a href="../question/sekibunn53.html">問題</a></li>
+            <li class="Q"><a href="./sekibunn53-answer.html">解説</a></li>
+        </ul>
+    </div>
+    <div class="question">
+        <ul>
+            <li>(1)の答え：\( -\dfrac{x}{2(x^2 - 3)} + \dfrac{1}{12}\log\bigg| \dfrac{x - 3}{x + 3} \bigg| + C \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{flalign}
+                & \displaystyle \int \dfrac{x^2}{(x^2 - 3)^2} dx \\
+                & = \displaystyle \int x \cdot \dfrac{x}{(x^2 - 3)^2} dx \\
+                & = -x \cdot \dfrac{1}{2}\dfrac{1}{x^2 - 3} - \displaystyle \int -\dfrac{1}{2}\dfrac{1}{x^2 - 3} dx \\
+                & = -\dfrac{x}{2(x^2 - 3)} + \dfrac{1}{12}\log\bigg| \dfrac{x - 3}{x + 3} \bigg| + C
+                \end{flalign} \)</li><br>
+            <li>(2)の答え：\( \dfrac{1}{2\sqrt{2}}\log\bigg| \dfrac{x^2 - \sqrt{2}x + 1}{x^2 + \sqrt{2}x + 1} \bigg| + C \) 
+                <p>解説：</p>
+                <p>
+                    \( \hspace{35px} \begin{flalign}
+                    & \displaystyle \int \dfrac{x^2 - 1}{x^4 + 1} dx \\
+                    & = \displaystyle \int \dfrac{x^2 - 1}{(x^2 + 1)^2 - ({2}x)^2} dx \\
+                    & = \displaystyle \int \dfrac{x^2 - 1}{(x^2 - \sqrt{2}x + 1)(x^2 + \sqrt{2}x + 1)} dx \\
+                    & = \dfrac{1}{2\sqrt{2}}\displaystyle \int \bigg( \dfrac{2x - \sqrt{2}}{x^2 - \sqrt{2}x + 1} - \dfrac{2x + \sqrt{2}}{x^2 + \sqrt{2}x + 1} \bigg) dx \\
+                    & = \dfrac{1}{2\sqrt{2}}\log\bigg| \dfrac{x^2 - \sqrt{2}x + 1}{x^2 + \sqrt{2}x + 1} \bigg| + C
+                    \end{flalign} \)
+                </p><br>
+                <h2>別解(教えてもらった)</h2>
+                <p>
+                    \( \hspace{35px} \begin{flalign}
+                    & \displaystyle \int \dfrac{x^2 - 1}{x^4 + 1} dx \\
+                    & = \displaystyle \int \dfrac{1}{x^2 + \dfrac{1}{x^2}} \dfrac{x^2 - 1}{x^2} dx \\
+                    & = \displaystyle \int \dfrac{1}{t^2 - 2} dx　\bigg( t = x + \dfrac{1}{x} \bigg) \\
+                    & = \dfrac{1}{2\sqrt{2}} \log \bigg| \dfrac{t - \sqrt{2}}{t + \sqrt{2}} \bigg| + C \\
+                    & = \dfrac{1}{2\sqrt{2}}\log\bigg| \dfrac{x^2 - \sqrt{2}x + 1}{x^2 + \sqrt{2}x + 1} \bigg| + C
+                    \end{flalign} \)
+                </p>
+            </li><br>
+            <li>(3)の答え：\( 0 \)
+                <p>解説：</p>
+                <p>\( I = \displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{(4x - \pi)^3}{\sin x + \cos x + 1} dx \) とおく。</p>
+                \( \hspace{35px} \begin{flalign}
+                & I = \displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{\bigg\{ 4\bigg( \dfrac{\pi}{2} - x \bigg) - \pi \bigg\}^3}{\sin \bigg( \dfrac{\pi}{2} - x \bigg) + \cos \bigg( \dfrac{\pi}{2} - x \bigg) + 1} dx \\
+                & = \displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{(\pi - 4x)^3}{\cos x + \sin x + 1} dx \\
+                & = \displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{-(4x - \pi)^3}{\sin x + \cos x + 1} dx \\
+                \end{flalign} \) <br><br>
+                \( \hspace{35px} \begin{eqnarray}
+                \therefore I + I & = & \displaystyle \int_{0}^{\frac{\pi}{2}} \dfrac{(4x - \pi)^3 - (4x - \pi)^3}{\sin x + \cos x + 1} dx \\
+                2I & = & 0 \\
+                I & = & 0
+                \end{eqnarray} \)
+            </li><br>
+            <li>(4)の答え：\( \dfrac{1}{4} \)
+                <p>解説：</p> 
+                <p>\( I = \displaystyle \int_{0}^{\frac{\pi}{2}} \cos 2x\log(1 + e^{\frac{\pi}{4} - x}) dx \) とおく。</p>
+                \( \hspace{35px} \begin{flalign}
+                & I = \displaystyle \int_{0}^{\frac{\pi}{2}} \cos 2x\log(1 + e^{\frac{\pi}{4} - x}) dx \\
+                & = \displaystyle \int_{0}^{\frac{\pi}{2}} \cos 2\bigg( \dfrac{\pi}{2} - x \bigg)\log(1 + e^{\frac{\pi}{4} - (\frac{\pi}{2} - x)}) dx \\
+                & = \displaystyle \int_{0}^{\frac{\pi}{2}} -\cos 2x\log(1 + e^{x - \frac{\pi}{4}}) dx \\
+                \end{flalign} \) <br><br>
+                \( \hspace{35px} \begin{eqnarray}
+                \therefore I + I & = & \displaystyle \int_{0}^{\frac{\pi}{2}} \cos 2x\log(\dfrac{1 + e^{\frac{\pi}{4} - x}}{1 + e^{x - \frac{\pi}{4}}}) dx \\
+                2I & = & \displaystyle \int_{0}^{\frac{\pi}{2}} \cos 2x\log e^{\frac{\pi}{4} - x} dx \\
+                & = & \displaystyle \int_{0}^{\frac{\pi}{2}} \cos 2x\bigg( \frac{\pi}{4} - x \bigg) dx \\
+                & = & \frac{\pi}{4}\displaystyle \int_{0}^{\frac{\pi}{2}} \cos 2x dx - \displaystyle \int_{0}^{\frac{\pi}{2}} x\cos 2x dx \\
+                & = & \frac{\pi}{4}\left[ \dfrac{\sin 2x}{2} \right]_{0}^{\frac{\pi}{2}} - \left[ \dfrac{x\sin 2x}{2} + \dfrac{\cos 2x}{4} \right]_{0}^{\frac{\pi}{2}} \\
+                & = & 0 - \bigg( -\dfrac{1}{4} - \dfrac{1}{4} \bigg) \\
+                & = & \dfrac{1}{2} \\
+                I & = & \dfrac{1}{4}
+                \end{eqnarray} \)</li><br>
+            <li>(5)の答え：\( -\log \bigg| \dfrac{1}{\log x} + \dfrac{1}{\tan x} \bigg| + C \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{flalign}
+                & \displaystyle \int \dfrac{\sin^2 x + x(\log x)^2}{x\log x\sin^2 x + x(\log x)^2\sin x\cos x} dx \\
+                & = \displaystyle \int \dfrac{\sin^2 x + x(\log x)^2}{x(\log x)^2\sin^2 x\bigg( \dfrac{1}{\log x} + \dfrac{1}{\tan x} \bigg)} dx \\
+                & = \displaystyle \int \dfrac{\dfrac{\sin^2 x + x(\log x)^2}{x(\log x)^2\sin^2 x}}{\dfrac{1}{\log x} + \dfrac{1}{\tan x}} dx \\
+                & = \displaystyle \int \dfrac{\dfrac{1}{x(\log x)^2} + \dfrac{1}{\sin^2 x}}{\dfrac{1}{\log x} + \dfrac{1}{\tan x}} dx \\
+                & = \displaystyle \int \dfrac{-\bigg( \dfrac{1}{\log x} + \dfrac{1}{\tan x} \bigg)'}{\dfrac{1}{\log x} + \dfrac{1}{\tan x}} dx \\
+                & = -\log \bigg| \dfrac{1}{\log x} + \dfrac{1}{\tan x} \bigg| + C
+                \end{flalign} \)</li><br>
+            <li>(6)の答え：\( \dfrac{1}{12}\bigg( \log \bigg( \dfrac{e^{2x} + e^{-2x} - 1}{e^{2x} + e^{-2x} + 2} \bigg) \bigg)^2 + C \)
+                <p>解説：</p> 
+                \( \hspace{35px} \begin{flalign}
+                & \displaystyle \int \dfrac{e^x - e^{-x}}{e^{3x} + e^{-3x}} \log\bigg( \dfrac{e^{2x} + e^{-2x} - 1}{e^{2x} + e^{-2x} + 2} \bigg) dx \\
+                & = \displaystyle \int \dfrac{1}{t^3 - 3t} \log\bigg( \dfrac{t^2 - 3}{t^2} \bigg) dx　(t = e^x + e^{-x}) \\
+                & = \dfrac{1}{6}\displaystyle \int \dfrac{\bigg( \dfrac{t^2 - 3}{t^2} \bigg)'}{\dfrac{t^2 - 3}{t^2}} \log\bigg( \dfrac{t^2 - 3}{t^2} \bigg) dx \cdots ※ \\
+                & = \dfrac{1}{12}\bigg( \log \bigg( \dfrac{t^2 - 3}{t^2} \bigg) \bigg)^2 + C \\
+                & = \dfrac{1}{12}\bigg( \log \bigg( \dfrac{e^{2x} + e^{-2x} - 1}{e^{2x} + e^{-2x} + 2} \bigg) \bigg)^2 + C
+                \end{flalign} \)
+                <h3>補足</h3>
+                <p>
+                    ※について <br><br>
+                    随分と唐突な変形になってしまったが、決して気合でこの変形を見つけろという訳ではない。<br>
+                    この問題は、きちんとその変形に気付けるように作られているのだ。<br><br>
+                    思考のプロセスを説明しよう。<br><br>
+                    まず、※の一つ前の式に注目してほしい。そこには分数と対数の積が現れている。<br>
+                    ここから部分積分が使えそうだという発想に至るのは、ごく自然な流れであろう。<br>
+                    そこで実際に部分積分を施してみると、分数の積分は部分分数分解によって処理でき、対数の微分も容易であることが分かる。<br><br>
+                    さて、ここでどうだろう。<br>
+                    対数を微分すると、見覚えのある分数が現れたではないか。<br>
+                    そう、これこそが元々対数と積をなしていた分数と一致するのである。<br>
+                    ここに気付けば、解けたも同然だ。<br>
+                    部分積分を施す前の式に立ち返れば、あとは微分接触型の簡単な積分に帰着する。<br><br>
+                    こうして、※の式変形が導かれるのである。<br>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./home.js"></script>
+</body>
+</html>
