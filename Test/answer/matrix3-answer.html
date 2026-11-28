@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>積を分ける積分｜解説</title>
+    <link rel="stylesheet" href="../../Css/sekibunn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p><a href="../../index.html">積を分ける積分</a></p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../App/home.html">ホーム</a></li>
+                <li><a href="../../App/test.html">今週のテスト</a></li>
+                <li><a href="../../App/past.html">過去問</a></li>
+                <li><a href="../../App/article.html">記事</a></li>
+                <li><a href="">自己満Q&A</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>           
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <p class="title-num">行列テストNo.3</p>
+        <ul>
+            <li><a href="../question/matrix3.html">問題</a></li>
+            <li class="Q"><a href="./matrix3-answer.html">解説</a></li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>\( \scriptsize A = \begin{pmatrix} 1 & 1 & 1 \\ 2 & 2 & 2 \\ 3 & 3 & 3 \end{pmatrix}, \)</p><br>
+        <p>\( \scriptsize B = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{pmatrix}, 
+            C = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 2 \\ 3 & 0 & 0 \end{pmatrix},
+            D = \begin{pmatrix} 0 & 0 & 1 \\ 2 & 0 & 0 \\ 0 & 3 & 0 \end{pmatrix} \)</p><br>
+        <ul>
+            <li>(1)の答え： \( I = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \)</li><br>
+            <li>(2)の答え：\( \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{pmatrix} \) 
+                <p>解説：</p>
+                \( \scriptsize \hspace{35px} \begin{flalign}
+                &  \begin{pmatrix} -1 & 2 & 6 \\ -5 & 4 & 7 \\ 8 & -9 & 3 \end{pmatrix} \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{pmatrix}
+                    + \begin{pmatrix} 2 & -2 & -6 \\ 5 & -3 & -7 \\ -8 & 9 & -2 \end{pmatrix} \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{pmatrix} \\
+                & = \Bigg\{ \begin{pmatrix} -1 & 2 & 6 \\ -5 & 4 & 7 \\ 8 & -9 & 3 \end{pmatrix} + \begin{pmatrix} 2 & -2 & -6 \\ 5 & -3 & -7 \\ -8 & 9 & -2 \end{pmatrix} \Bigg\} \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{pmatrix} \\
+                & = I\begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{pmatrix} \\
+                & = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{pmatrix}
+                \end{flalign} \)
+            </li><br>
+            <li>(3)の答え：\( \begin{pmatrix} 2 & 4 & 6 \\ 2 & 4 & 6 \\ 2 & 4 & 6 \end{pmatrix} \)
+                <p>解説：</p>
+                \( \scriptsize \hspace{35px} \begin{flalign}
+                & (2A)^T \\
+                & = 2A^T \\
+                & = 2\begin{pmatrix} 1 & 2 & 3 \\ 1 & 2 & 3 \\ 1 & 2 & 3 \end{pmatrix} \\
+                & = \begin{pmatrix} 2 & 4 & 6 \\ 2 & 4 & 6 \\ 2 & 4 & 6 \end{pmatrix} \\
+                \end{flalign} \)
+            </li><br>
+            <li>(4)の答え：\( \begin{pmatrix} 1 & 2 & 3 \\ 1 & 2 & 3 \\ 1 & 2 & 3 \end{pmatrix} \)
+                <p>解説：</p> 
+                \( \scriptsize \hspace{35px} \begin{flalign}
+                & B^T + C^T + D^T \\
+                & = (B + C + D)^T \\
+                & = A^T \\
+                & = \begin{pmatrix} 1 & 2 & 3 \\ 1 & 2 & 3 \\ 1 & 2 & 3 \end{pmatrix}
+                \end{flalign} \)</li><br>
+            <li>(5)の答え：証明は下記参照、　\( \begin{pmatrix} 1 & \frac{3}{2} & 2 \\ \frac{3}{2} & 2 & \frac{5}{2} \\ 2 & \frac{5}{2} & 3 \end{pmatrix} + \begin{pmatrix} 0 & -\frac{1}{2} & -1 \\ \frac{1}{2} & 0 & -\frac{1}{2} \\ 1 & \frac{1}{2} & 0 \end{pmatrix} \)
+                <p>解説：</p>
+                \( \scriptsize \hspace{35px} \begin{flalign}
+                & (X + X^T)^T \\
+                & = X^T + (X^T)^T \\
+                & = X^T + X \\
+                & = X + X^T　(対称行列が示された)
+                \end{flalign} \) <br><br>
+                \( \scriptsize \hspace{35px} \begin{flalign}
+                & (X - X^T)^T \\
+                & = X^T - (X^T)^T \\
+                & = X^T - X \\
+                & = -(X - X^T)　(交代行列が示された)
+                \end{flalign} \) <br><br> 
+                \( \scriptsize \hspace{35px} \begin{flalign}
+                & A \\
+                & = \dfrac{1}{2}(A + A^T) + \dfrac{1}{2}(A - A^T) \\
+                & = \dfrac{1}{2}\Bigg\{\begin{pmatrix} 1 & 1 & 1 \\ 2 & 2 & 2 \\ 3 & 3 & 3 \end{pmatrix} + \begin{pmatrix} 1 & 2 & 3 \\ 1 & 2 & 3 \\ 1 & 2 & 3 \end{pmatrix} \Bigg\}
+                + \dfrac{1}{2}\Bigg\{ \begin{pmatrix} 1 & 1 & 1 \\ 2 & 2 & 2 \\ 3 & 3 & 3 \end{pmatrix} - \begin{pmatrix} 1 & 2 & 3 \\ 1 & 2 & 3 \\ 1 & 2 & 3 \end{pmatrix} \Bigg\} \\
+                & = \dfrac{1}{2}\begin{pmatrix} 2 & 3 & 4 \\ 3 & 4 & 5 \\ 4 & 5 & 6 \end{pmatrix} + \dfrac{1}{2}\begin{pmatrix} 0 & -1 & -2 \\ 1 & 0 & -1 \\ 2 & 1 & 0 \end{pmatrix} \\
+                & = \begin{pmatrix} 1 & \frac{3}{2} & 2 \\ \frac{3}{2} & 2 & \frac{5}{2} \\ 2 & \frac{5}{2} & 3 \end{pmatrix} + \begin{pmatrix} 0 & -\frac{1}{2} & -1 \\ \frac{1}{2} & 0 & -\frac{1}{2} \\ 1 & \frac{1}{2} & 0 \end{pmatrix}
+                \end{flalign} \)</li>
+        </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./home.js"></script>
+</body>
+</html>
